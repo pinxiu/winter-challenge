@@ -1,0 +1,44 @@
+<div class="completed-background">
+</div>
+
+<div class="container completed">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2>Accomplished Missions</h2>
+				</div>
+				<div class="panel-body">
+					
+					<h4>
+					<% if @comments.length != 0 %>
+						Here are the list of accomplished missions so far. Browse through them to see what others have been up to during break!
+					<% else %>
+						No missions accomplished yet. Be the first to post!
+					<% end %>
+					</h4>
+				</div>
+				<table class="table table-striped">
+					<% @comments.each do |comment| %>
+						<tr>
+							<td>
+								<%= comment.name %>
+							</td>
+							<td>
+								<%= comment.team %>
+							</td>
+							<td>
+								<%= comment.mission.name %>
+							</td>
+							<% if comment.content != nil %>
+							<td>
+								<%= comment.content %>
+							</td>
+							<% end %>
+						</tr>
+					<% end %>	
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

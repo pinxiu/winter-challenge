@@ -1,0 +1,114 @@
+
+<div class="content-section-a">
+
+
+    <div class="container">
+        <div class="row">
+            <div class ="col-lg-4">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Missions</h2>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="intro">Bible/Disciplines</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <ul class = "list-group">
+                    <% @bibleDisciplines[0].each do |mission| %>
+                        <li class = "list-group-item">
+                            <%= mission.name %>
+                            - <%= mission.points %>
+                            Points
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <ul class = "list-group">
+                    <% @bibleDisciplines[1].each do |mission| %>
+                        <li class = "list-group-item">
+                            <%= mission.name %>
+                            - <%= mission.points %>
+                            Points
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-section-b">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h3>Service</h3>
+                <ul class = "list-group">
+                    <% @services.each do |mission| %>
+                        <li class = "list-group-item">
+                            <%= mission.name %>
+                            - <%= mission.points %>
+                            Points
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h3>Evangelism</h3>
+                <ul class = "list-group">
+                    <% @evangelisms.each do |mission| %>
+                        <li class = "list-group-item">
+                            <%= mission.name %>
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="content-section-a">
+
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-6">
+                <h3>Miscellaneous</h3>
+                <ul class = "list-group">
+                    <% @miscs.each do |mission| %>
+                        <li class = "list-group-item">
+                            <%= mission.name %>
+                            - <%= mission.points %>
+                            Points
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h3>Reading</h3>
+                <ul class = "list-group">
+                    <% @readings.each do |mission| %>
+                        <li class = "list-group-item">
+                            <%= mission.name %>
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.content-section-b -->
