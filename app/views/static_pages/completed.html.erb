@@ -33,14 +33,13 @@
 							<td>
 								<%= comment.mission.name %>
 							</td>
-							<% if comment.content != nil %>
 							<td>
+							<% if comment.content != nil %>
 								<%= comment.content %>
-							</td>
 							<% end %>
+							</td>
 							<td>
 							<% if comment.avatar.file? %>
-						
 								<%= image_tag comment.avatar.url(:medium) %>
 							<% end %>
 							</td>
