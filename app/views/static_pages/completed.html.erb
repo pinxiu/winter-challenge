@@ -34,6 +34,9 @@
 							<td>
 								<%= comment.content %>
 							</td>
+							<td>
+								<%= image_tag comment.avatar.url(:medium) %>
+							</td>
 							<% end %>
 						</tr>
 					<% end %>	
