@@ -16,7 +16,6 @@ read = Category.create!(mission_type: 'Reading')
 ser = Category.create!(mission_type: 'Service')
 bonus = Category.create!(mission_type: 'Bonus')
 
-
 Mission.create!(name: 'Create a study guide for a Bible book of your choice - 30 points', points: 30, category: bib)
 Mission.create!(name: 'Do DT at least 3x per week (throughout break) - 200 points', points: 200 , category: bib)
 Mission.create!(name: 'Pray with a peer over Skype/phone once a week (throughout break) - 60 points', points: 60, category: bib)
