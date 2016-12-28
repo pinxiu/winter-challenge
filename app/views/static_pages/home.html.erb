@@ -105,26 +105,31 @@
 
                         <select class="form-control" name="comment[mission_id]" id="comment_mission_id">
                             <option value>Select Mission</option>
-                            <option value>------------ Bible/Disciplines ------------ </option>
-                            <% @bibleDisciplines.each do |mission| %>
-                            <option value=<%= mission.id %>><%= mission.name %> </option>
-                            <% end %>
-                            <option value>------------ Evangelism ------------</option>
-                            <% @evangelisms.each do |mission| %>
-                            <option value=<%= mission.id %>><%= mission.name %> </option>
-                            <% end %>
-                            <option value>------------ Reading ------------</option>
-                            <% @readings.each do |mission| %>
-                            <option value=<%= mission.id %>><%= mission.name %> </option>
-                            <% end %>
-                            <option value>------------ Service ------------</option>
-                            <% @services.each do |mission| %>
-                            <option value=<%= mission.id %>><%= mission.name %> </option>
-                            <% end %>
-                            <option value>------------ Miscellaneous ------------</option>
-                            <% @miscs.each do |mission| %>
-                            <option value=<%= mission.id %>><%= mission.name %> </option>
-                            <% end %>
+                            <optgroup label="Bible/Disciplines">Bible/Disciplines
+                                <% @bibleDisciplines.each do |mission| %>
+                                <option value=<%= mission.id %>><%= mission.name %></option>
+                                <% end %>
+                            </optgroup>
+                            <optgroup label="Evangelism">Evangelism
+                                <% @evangelisms.each do |mission| %>
+                                <option value=<%= mission.id %>><%= mission.name %></option>
+                                <% end %>
+                            </optgroup>
+                            <optgroup label="Reading">Reading
+                                <% @readings.each do |mission| %>
+                                <option value=<%= mission.id %>><%= mission.name %></option>
+                                <% end %>
+                            </optgroup>
+                            <optgroup label="Service">Service
+                                <% @services.each do |mission| %>
+                                <option value=<%= mission.id %>><%= mission.name %></option>
+                                <% end %>
+                            </optgroup>
+                            <optgroup label="Miscellaneous">Miscellaneous
+                                <% @miscs.each do |mission| %>
+                                <option value=<%= mission.id %>><%= mission.name %></option>
+                                <% end %>
+                            </optgroup>
                         </select>
                     </div>
 
