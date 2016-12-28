@@ -38,6 +38,11 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'rails_12factor', group: :production
 gem "paperclip", "~> 5.0.0"
 
+gem 'aws-sdk', '~> 1.36.1'
+gem 'fog' 
+
+gem "figaro"
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
