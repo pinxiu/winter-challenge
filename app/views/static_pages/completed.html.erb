@@ -40,7 +40,7 @@
 							</td>
 							<td>
 							<% if comment.avatar.file? %>
-								<%= image_tag comment.avatar.url(:medium) %>
+								<%=link_to image_tag(comment.avatar.url(:medium)), comment.avatar.url(:original), :popup=>['original_image', 'height=700,width=900'] %>
 							<% end %>
 							</td>
 						</tr>
