@@ -18,6 +18,9 @@
 					<% end %>
 					</h4>
 				</div>
+				<div class="pagination">
+				<%= will_paginate @comments %>
+				</div>
 				<table class="table table-striped">
 					<% @comments.each do |comment| %>
 						<tr>
@@ -35,11 +38,12 @@
 								<%= comment.content %>
 							</td>
 							<% end %>
-							<% if comment.avatar.file? %>
 							<td>
+							<% if comment.avatar.file? %>
+						
 								<%= image_tag comment.avatar.url(:medium) %>
-							</td>
 							<% end %>
+							</td>
 						</tr>
 					<% end %>	
 				</table>

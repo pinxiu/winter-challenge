@@ -32,6 +32,6 @@ class StaticPagesController < ApplicationController
    end
 
    def completed
-      @comments = Comment.all
+      @comments = Comment.page(params[:page]).order('created_at DESC')
     end 
 end

@@ -1,4 +1,6 @@
 class Comment < ApplicationRecord
+	self.per_page = 10
+
 	belongs_to :mission
 
 	validates :name, presence: true, length: {maximum: 50}
