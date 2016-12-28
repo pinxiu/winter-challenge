@@ -34,6 +34,8 @@
 							<td>
 								<%= comment.content %>
 							</td>
+							<% end %>
+							<% if comment.avatar.file? %>
 							<td>
 								<%= image_tag comment.avatar.url(:medium) %>
 							</td>
