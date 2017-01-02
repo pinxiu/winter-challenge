@@ -6,6 +6,7 @@ class Comment < ApplicationRecord
 	validates :name, presence: true, length: {maximum: 50}
 	validates :team, presence: true, length: {maximum: 3}
     before_validation :strip_whitespace
+    before_validation :force_names
 
 
 	has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" },
@@ -25,6 +26,28 @@ class Comment < ApplicationRecord
     private
     def strip_whitespace
         self.name = self.name.strip unless self.name.nil?
+    end
+
+    def force_names
+        if self.name == "Kenny Kao"
+            self.name = "Kenneth Kao"
+        end
+
+        if self.name == "Vina Nguyen-Ha"
+            self.name = "Vina Nguyen Ha"
+        end
+
+        if self.name == "Diana Alcala-Davalos"
+            self.name = "Diana Alcala Davalos"
+        end
+
+        if self.name == "Vanessa Zembrano"
+            self.name = "Vanessa Zambrano"
+        end
+
+        if self.name == "Vanessa Zambranos"
+            self.name = "Vanessa Zambrano"
+        end
     end
 
 end
