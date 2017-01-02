@@ -5,6 +5,8 @@ class Comment < ApplicationRecord
 
 	validates :name, presence: true, length: {maximum: 50}
 	validates :team, presence: true, length: {maximum: 3}
+    before_validation :strip_whitespace
+
 
 	has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" },
 	:url  => ":s3_domain_url",
@@ -19,5 +21,10 @@ class Comment < ApplicationRecord
 
 
 	validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
+
+    private
+    def strip_whitespace
+        self.name = self.name.strip unless self.name.nil?
+    end
 
 end

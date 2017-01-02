@@ -33,5 +33,10 @@ class StaticPagesController < ApplicationController
 
    def completed
       @comments = Comment.page(params[:page]).order('created_at DESC')
-    end 
+   end 
+
+   def powerranking
+      
+   end
+
 end
