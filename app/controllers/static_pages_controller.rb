@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
    def home
+      @totalCount = Comment.count
    	broPosts = Comment.where(:team => "Bro").all
       sisPosts = Comment.where(:team => "Sis").all
    	@broSum = 0;
@@ -36,7 +37,7 @@ class StaticPagesController < ApplicationController
    end 
 
    def powerranking
-      
+      names = Comment.uniq.pluck(:name)
    end
 
 end
