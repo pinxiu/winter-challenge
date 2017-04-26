@@ -1,35 +1,41 @@
 class StaticPagesController < ApplicationController
    def home
       @totalCount = Comment.count
-   	broPosts = Comment.where(:team => "Bro").all
-      sisPosts = Comment.where(:team => "Sis").all
-   	@broSum = 0;
-   	@sisSum = 0;
+   	one = Comment.where(:team => "Team 1").all
+      two = Comment.where(:team => "Team 2").all
+      three = Comment.where(:team => "Team 3").all
+   	@oneSum = 0;
+   	@twoSum = 0;
+      @threeSum = 0;
 
-   	broPosts.each do |broPost|
-   		@broSum += broPost.mission.points
+   	one.each do |post|
+   		@oneSum += post.mission.points
    	end
 
-      sisPosts.each do |sisPost|
-        @sisSum += sisPost.mission.points
+      two.each do |post|
+         @twoSum += post.mission.points
+      end
+
+      three.each do |post|
+         @threeSum += post.mission.points
       end
 
    	@comment = Comment.new
 
-      @bibleDisciplines = Mission.where(:category_id => Category.where(:mission_type => "Bible/Disciplines").first.id)
-      @evangelisms = Mission.where(:category_id => Category.where(:mission_type => "Evangelism").first.id)
-      @services = Mission.where(:category_id => Category.where(:mission_type => "Service").first.id)
-      @readings = Mission.where(:category_id => Category.where(:mission_type => "Reading").first.id)
-      @miscs = Mission.where(:category_id => Category.where(:mission_type => "Miscellaneous").first.id)
+      @wog = Mission.where(:category_id => Category.where(:mission_type => "Word of God").first.id)
+      @evangelism = Mission.where(:category_id => Category.where(:mission_type => "Evangelism").first.id)
+      @prayer = Mission.where(:category_id => Category.where(:mission_type => "Prayer").first.id)
+      @ser = Mission.where(:category_id => Category.where(:mission_type => "Service").first.id)
+      @eq = Mission.where(:category_id => Category.where(:mission_type => "Equipping").first.id)
    end
 
    def more
-   	bibleDisciplines = Mission.where(:category_id => Category.where(:mission_type => "Bible/Disciplines").first.id)
-   	@bibleDisciplines = bibleDisciplines.in_groups(2)
-   	@evangelisms = Mission.where(:category_id => Category.where(:mission_type => "Evangelism").first.id)
-   	@services = Mission.where(:category_id => Category.where(:mission_type => "Service").first.id)
-   	@readings = Mission.where(:category_id => Category.where(:mission_type => "Reading").first.id)
-   	@miscs = Mission.where(:category_id => Category.where(:mission_type => "Miscellaneous").first.id)
+   	@wog = Mission.where(:category_id => Category.where(:mission_type => "Word of God").first.id)
+   	# @bibleDisciplines = bibleDisciplines.in_groups(2)
+   	@evangelism = Mission.where(:category_id => Category.where(:mission_type => "Evangelism").first.id)
+   	@service = Mission.where(:category_id => Category.where(:mission_type => "Service").first.id)
+   	@prayer = Mission.where(:category_id => Category.where(:mission_type => "Prayer").first.id)
+   	@equip = Mission.where(:category_id => Category.where(:mission_type => "Equipping").first.id)
    end
 
    def completed

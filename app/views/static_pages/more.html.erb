@@ -11,28 +11,29 @@
 
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-lg-12">
-                <h3 class="intro">Bible/Disciplines</h3>
-            </div>
-        </div>
-
         <div class="row">
             <div class="col-lg-6">
+                <h3>Word of God</h3>
                 <ul class = "list-group">
-                    <% @bibleDisciplines[0].each do |mission| %>
+                    <% @wog.each do |mission| %>
                         <li class = "list-group-item">
-                            <%= mission.name %>
+                            <%= mission.name %> 
+                            - 
+                            <%= mission.points %>
+                            points
                         </li>
                     <% end %>
                 </ul>
             </div>
             <div class="col-lg-6">
+                <h3>Evangelism</h3>
                 <ul class = "list-group">
-                    <% @bibleDisciplines[1].each do |mission| %>
+                    <% @evangelism.each do |mission| %>
                         <li class = "list-group-item">
                             <%= mission.name %>
+                            -
+                            <%= mission.points %>
+                            points
                         </li>
                     <% end %>
                 </ul>
@@ -47,11 +48,14 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <h3>Service</h3>
+                <h3>Prayer</h3>
                 <ul class = "list-group">
-                    <% @services.each do |mission| %>
+                    <% @prayer.each do |mission| %>
                         <li class = "list-group-item">
                             <%= mission.name %>
+                            - 
+                            <%= mission.points %>
+                            points
                         </li>
                     <% end %>
                 </ul>
@@ -59,9 +63,12 @@
             <div class="col-lg-6">
                 <h3>Evangelism</h3>
                 <ul class = "list-group">
-                    <% @evangelisms.each do |mission| %>
+                    <% @evangelism.each do |mission| %>
                         <li class = "list-group-item">
                             <%= mission.name %>
+                            - 
+                            <%= mission.points %>
+                            points
                         </li>
                     <% end %>
                 </ul>
@@ -78,21 +85,14 @@
 
         <div class="row">
             <div class="col-lg-6">
-                <h3>Miscellaneous</h3>
+                <h3>Equipping</h3>
                 <ul class = "list-group">
-                    <% @miscs.each do |mission| %>
+                    <% @equip.each do |mission| %>
                         <li class = "list-group-item">
                             <%= mission.name %>
-                        </li>
-                    <% end %>
-                </ul>
-            </div>
-            <div class="col-lg-6">
-                <h3>Reading</h3>
-                <ul class = "list-group">
-                    <% @readings.each do |mission| %>
-                        <li class = "list-group-item">
-                            <%= mission.name %>
+                            - 
+                            <%= mission.points %>
+                            points
                         </li>
                     <% end %>
                 </ul>
