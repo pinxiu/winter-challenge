@@ -4,9 +4,9 @@ class StaticPagesController < ApplicationController
    	one = Comment.where(:team => "Team 1").all
       two = Comment.where(:team => "Team 2").all
       three = Comment.where(:team => "Team 3").all
-   	@oneSum = 5;
+   	@oneSum = 0;
    	@twoSum = 0;
-      @threeSum = 3;
+      @threeSum = 0;
 
    	one.each do |post|
    		@oneSum += post.mission.points
