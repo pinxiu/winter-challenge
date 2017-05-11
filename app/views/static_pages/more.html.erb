@@ -1,7 +1,5 @@
 
-<div class="content-section-a">
-
-
+<div class="content-section-b">
     <div class="container">
         <div class="row">
             <div class ="col-lg-4">
@@ -13,9 +11,9 @@
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <h3>Word of God</h3>
+                <h3>Spiritual Disciplines</h3>
                 <ul class = "list-group">
-                    <% @wog.each do |mission| %>
+                    <% @sd.each do |mission| %>
                         <li class = "list-group-item">
                             <%= mission.name %> 
                             - 
@@ -42,48 +40,22 @@
     </div>
 </div>
 
-<div class="content-section-b">
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <h3>Prayer</h3>
-                <ul class = "list-group">
-                    <% @prayer.each do |mission| %>
-                        <li class = "list-group-item">
-                            <%= mission.name %>
-                            - 
-                            <%= mission.points %>
-                            points
-                        </li>
-                    <% end %>
-                </ul>
-            </div>
-            <div class="col-lg-6">
-                <h3>Evangelism</h3>
-                <ul class = "list-group">
-                    <% @evangelism.each do |mission| %>
-                        <li class = "list-group-item">
-                            <%= mission.name %>
-                            - 
-                            <%= mission.points %>
-                            points
-                        </li>
-                    <% end %>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-</div>
-
 <div class="content-section-a">
-
-
     <div class="container">
-
         <div class="row">
+            <div class="col-lg-6">
+                <h3>Service</h3>
+                <ul class = "list-group">
+                    <% @service.each do |mission| %>
+                        <li class = "list-group-item">
+                            <%= mission.name %>
+                            - 
+                            <%= mission.points %>
+                            points
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
             <div class="col-lg-6">
                 <h3>Equipping</h3>
                 <ul class = "list-group">
@@ -98,9 +70,6 @@
                 </ul>
             </div>
         </div>
-
     </div>
-    <!-- /.container -->
 
 </div>
-<!-- /.content-section-b -->

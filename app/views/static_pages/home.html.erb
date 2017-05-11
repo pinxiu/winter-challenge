@@ -154,18 +154,13 @@ Header -->
 
                             <select class="form-control" name="comment[mission_id]" id="comment_mission_id">
                                 <option value>Select Challenge</option>
-                                <optgroup label="Word of God">Word of God
-                                    <% @wog.each do |mission| %>
+                                <optgroup label="Spiritual Discipline">Spiritual Disciplines
+                                    <% @sd.each do |mission| %>
                                     <option value=<%= mission.id %>><%= mission.name %></option>
                                     <% end %>
                                 </optgroup>
                                 <optgroup label="Evangelism">Evangelism
                                     <% @evangelism.each do |mission| %>
-                                    <option value=<%= mission.id %>><%= mission.name %></option>
-                                    <% end %>
-                                </optgroup>
-                                <optgroup label="Prayer">Prayer
-                                    <% @prayer.each do |mission| %>
                                     <option value=<%= mission.id %>><%= mission.name %></option>
                                     <% end %>
                                 </optgroup>
