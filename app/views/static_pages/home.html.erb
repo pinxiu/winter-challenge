@@ -10,67 +10,14 @@ Header -->
                     <h4><i>"And let us consider how to stir up one another to love and good works." Hebrews 10:24</i></h4>
                     <hr class="intro-divider">
                     <ul class="list-inline intro-social-buttons">
-                        <% if @oneSum >= @twoSum && @oneSum >= @threeSum %>
-                            <h2 class="intro-count">Team 1: 
-                                <%= @oneSum %>
-                            </h2>
-                            <% if @twoSum >= @threeSum %>
-                                <h2 class="intro-count">Team 2: 
-                                    <%= @twoSum %>
-                                </h2>
-                                <h2 class="intro-count">Team 3: 
-                                    <%= @threeSum %>
-                                </h2>
-                            <% else %>
-                                <h2 class="intro-count">Team 3: 
-                                    <%= @threeSum %>
-                                </h2>
-                                <h2 class="intro-count">Team 2: 
-                                    <%= @twoSum %>
-                                </h2>
-                            <% end %>
 
-                        <% elsif @twoSum >= @oneSum && @twoSum >= @threeSum %>
-                            <h2 class="intro-count">Team 2: 
-                                <%= @twoSum %>
+                        <% @points.each do |team| %>
+                            <h2 class="intro-count">
+                                <%= team[0] %>: 
+                                <%= team[1] %>
                             </h2>
-                            <% if @oneSum >= @threeSum %>
-                                <h2 class="intro-count">Team 1: 
-                                    <%= @oneSum %>
-                                </h2>
-                                <h2 class="intro-count">Team 3: 
-                                    <%= @threeSum %>
-                                </h2>
-                            <% else %>
-                                <h2 class="intro-count">Team 3: 
-                                    <%= @threeSum %>
-                                </h2>
-                                <h2 class="intro-count">Team 1 
-                                    <%= @oneSum %>
-                                </h2>
-                            <% end %>
 
-                        <% elsif @threeSum >= @oneSum && @threeSum >= @twoSum %>
-                            <h2 class="intro-count">Team 3: 
-                                <%= @threeSum %>
-                            </h2>
-                            <% if @twoSum >= @oneSum %>
-                                <h2 class="intro-count">Team 2: 
-                                    <%= @twoSum %>
-                                </h2>
-                                <h2 class="intro-count">Team 1: 
-                                    <%= @oneSum %>
-                                </h2>
-                            <% else %>
-                                <h2 class="intro-count">Team 1: 
-                                    <%= @oneSum %>
-                                </h2>
-                                <h2 class="intro-count">Team 2: 
-                                    <%= @twoSum %>
-                                </h2>
-                            <% end %>
                         <% end %>
-                        
                     </ul>
                 </div>
             </div>
@@ -127,8 +74,6 @@ Header -->
 
         <div class="row">
             <div class="col-lg-12">
-            <h3>Submissions are not yet open. Submit your proposals <a href="https://docs.google.com/a/gpmail.org/forms/d/e/1FAIpQLSdlFgEW-KHhNBhN8xSQCSwQvEC3hYbTadvbsvYeGfze0Ei6oA/viewform">here!</a></h4>
-            <% if false %>
                 <%= form_for @comment, :html => {:role => 'form'} do |f| %>
 
                     <div class="col-lg-6">
@@ -140,7 +85,7 @@ Header -->
 
                         <div class="form-group">
                             <%= f.label :team %>
-                            <%= f.select :team, options_for_select(["Team 1", "Team 2", "Team 3"]), {:prompt => 'Select Team'}, { :class => "form-control" } %>
+                            <%= f.select :team, options_for_select(["House Divided", "Blessed Fools", "No Pressure", "Salt 2.0"]), {:prompt => 'Select Team'}, { :class => "form-control" } %>
                         </div>
                         <div class="form-group">
                             <%= f.label :content, "Blurb (optional)" %>
@@ -156,22 +101,22 @@ Header -->
                                 <option value>Select Challenge</option>
                                 <optgroup label="Spiritual Discipline">Spiritual Disciplines
                                     <% @sd.each do |mission| %>
-                                    <option value=<%= mission.id %>><%= mission.name %></option>
+                                    <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
                                     <% end %>
                                 </optgroup>
                                 <optgroup label="Evangelism">Evangelism
                                     <% @evangelism.each do |mission| %>
-                                    <option value=<%= mission.id %>><%= mission.name %></option>
+                                    <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
                                     <% end %>
                                 </optgroup>
                                 <optgroup label="Service">Service
                                     <% @ser.each do |mission| %>
-                                    <option value=<%= mission.id %>><%= mission.name %></option>
+                                    <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
                                     <% end %>
                                 </optgroup>
                                 <optgroup label="Equipping">Equipping
                                     <% @eq.each do |mission| %>
-                                    <option value=<%= mission.id %>><%= mission.name %></option>
+                                    <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
                                     <% end %>
                                 </optgroup>
                             </select>
@@ -179,15 +124,34 @@ Header -->
 
                         <div class="form-group">
                             <%= f.label :avatar, "Upload a Picture (optional, but recommended)" %>
-                            <%= f.file_field :avatar, { :class => "form-control"} %>
+                            <h6>COMING SOON</h6>
+                            <!-- <%= f.file_field :avatar, { :class => "form-control"} %> -->
                         </div>
                     </div>
 
                     <%= f.submit "Submit my post", class: "btn btn-primary btn-lg btn-block" %>
                 <% end %>
-                <% end %>
             </div>
         </div>
     </div>  
 </div>
-<!-- /.content-section-b
+
+
+<div class="content-section-a">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-3">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <div class="well">
+                    <h5>Submit more proposals <a href="https://docs.google.com/a/gpmail.org/forms/d/e/1FAIpQLSdlFgEW-KHhNBhN8xSQCSwQvEC3hYbTadvbsvYeGfze0Ei6oA/viewform">here!</a></h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+</div>
+

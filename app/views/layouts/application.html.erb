@@ -21,16 +21,19 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <%= link_to "Summer Challenge Home", root_path, class: "navbar-brand topnav" %>
+            <%= link_to "Summer Challenge", root_path, class: "navbar-brand topnav" %>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <%= link_to "Challenges List", more_path %>
+                    <%= link_to "Challenges", more_path %>
                 </li>
                 <li>
-                    <%= link_to "Completed Challenges", completed_path %>
+                    <%= link_to "Completed", completed_path %>
+                </li>
+                <li>
+                    <%= link_to "Rosters", team_path %>
                 </li>
             </ul>
         </div>
