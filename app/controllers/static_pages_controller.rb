@@ -5,10 +5,12 @@ class StaticPagesController < ApplicationController
       two = Comment.where(:team => "Blessed Fools").all
       three = Comment.where(:team => "No Pressure").all
       four = Comment.where(:team => "Salt 2.0").all
+      five = Comment.where(:team => "Too Easy").all
    	@oneSum = 0;
    	@twoSum = 0;
       @threeSum = 0;
       @fourSum = 0;
+      @fiveSum = 0;
 
    	one.each do |post|
    		@oneSum += post.mission.points
@@ -26,7 +28,11 @@ class StaticPagesController < ApplicationController
          @fourSum += post.mission.points
       end
 
-      @points = [['House Divided', @oneSum], ['Blessed Fools', @twoSum], ['No Pressure', @threeSum], ['Salt 2.0', @fourSum]].sort do |a, b|
+      five.each do |post|
+         @fiveSum += post.mission.points
+      end
+
+      @points = [['House Divided', @oneSum], ['Blessed Fools', @twoSum], ['No Pressure', @threeSum], ['Salt 2.0', @fourSum], ["Too Easy (Staff)", @fiveSum]].sort do |a, b|
          b[1] <=> a[1]
       end
 
@@ -51,6 +57,7 @@ class StaticPagesController < ApplicationController
       @two = ['Christine', 'Nick', 'Chris', 'Albert', 'Younie', 'Dorothy', 'Rex']
       @three = ['Karen', 'Jeff', 'David', 'Neida', 'Anastasia', 'Grace', 'Cindy']
       @four = ['Tim', 'Stone', 'Sean', 'Jocelyn', 'Eleanor', 'Michelle', 'Emali']
+      @five = ['Jenny', 'Kevan', 'Fan', 'John', 'Adeline', 'Alex']
    end
 
    def completed

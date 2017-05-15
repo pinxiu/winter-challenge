@@ -45,10 +45,11 @@ h6 {
     background: url('/assets/bible.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
+    z-index: -1;
 }
 
 .completed {
-    padding-top: 85px;
+    padding: 85px 25px;
 }
 
 .intro-message {
@@ -185,7 +186,6 @@ p.copyright {
 .all-comments {
     padding: 0 20px;
 }
-
 
 // <--------------------->
 
