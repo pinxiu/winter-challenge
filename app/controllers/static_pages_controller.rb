@@ -36,6 +36,7 @@ class StaticPagesController < ApplicationController
          b[1] <=> a[1]
       end
 
+      @winner = @points.delete_at(0)
 
    	@comment = Comment.new
 
