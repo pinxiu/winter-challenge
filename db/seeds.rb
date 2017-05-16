@@ -35,8 +35,8 @@ Mission.create!(name: 'CS Lewis Challenge - Read Miracles', points: 20, category
 Mission.create!(name: 'Read a biography of a Christian hero and post a 1-paragraph summary or personal takeaway (Elizabeth Elliot, Jim Elliot, Hudson Taylor, Adoniram Judson, Gladys Aylward)', points: 20, category: equ)
 
 
-Mission.create!(name: 'Make a meal for your family', points: 10, category: ser)
-Mission.create!(name: 'Go on a Summer Project trip', points: 100, category: ev)
+# Mission.create!(name: 'Make a meal for your family', points: 5, category: ser)
+# Mission.create!(name: 'Go on a Summer Project trip', points: 100, category: ev)
 
 # Mission.create!(name: 'Create a study guide for a Bible book of your choice - 30 points', points: 30, category: bib)
 # Mission.create!(name: 'Do DT at least 3x per week (throughout break) - 200 points', points: 200 , category: bib)
