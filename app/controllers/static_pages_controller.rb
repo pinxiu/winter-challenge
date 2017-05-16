@@ -57,7 +57,7 @@ class StaticPagesController < ApplicationController
       @one = ['Shannon', 'Derek', 'Vincent', 'Tiger', 'Helen', 'Diamond', 'Angela']
       @two = ['Christine', 'Nick', 'Chris', 'Albert', 'Younie', 'Dorothy', 'Rex']
       @three = ['Karen', 'Jeff', 'David', 'Neida', 'Anastasia', 'Grace', 'Cindy']
-      @four = ['Tim', 'Stone', 'Sean', 'Jocelyn', 'Eleanor', 'Michelle', 'Emali']
+      @four = ['Tim', 'Stone', 'Sean', 'Jocelyn', 'Eleanor', 'Michelle', 'Emali', 'Erika']
       @five = ['Jenny', 'Kevan', 'Fan', 'John', 'Adeline', 'Alex']
    end
 
