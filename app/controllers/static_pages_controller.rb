@@ -54,7 +54,7 @@ class StaticPagesController < ApplicationController
    end
 
    def team
-      @one = ['Shannon', 'Derek', 'Vincent', 'Tiger', 'Helen', 'Diamond', 'Angela']
+      @one = ['Shannon', 'Derek', 'Vincent', 'Tiger', 'Helen', 'Diamond', 'Angela', 'Katy']
       @two = ['Christine', 'Nick', 'Chris', 'Albert', 'Younie', 'Dorothy', 'Rex']
       @three = ['Karen', 'Jeff', 'David', 'Neida', 'Anastasia', 'Grace', 'Cindy']
       @four = ['Tim', 'Stone', 'Sean', 'Jocelyn', 'Eleanor', 'Michelle', 'Emali', 'Erika']
