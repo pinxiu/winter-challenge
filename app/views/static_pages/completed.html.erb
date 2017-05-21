@@ -36,7 +36,8 @@
 						<% @comments.each do |comment| %>
 							<tr>
 								<td>
-									<%= comment.name %>
+									<div><%= comment.name %></div>
+									<div><%= comment.created_at.to_time.strftime('%B %e at %l:%M %p') %></div>
 								</td>
 								<td>
 									<%= comment.team %>
