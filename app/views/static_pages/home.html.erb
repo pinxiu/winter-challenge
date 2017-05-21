@@ -128,6 +128,11 @@
                             <%= f.label :avatar, "Upload a Picture (optional, but recommended)" %>
                             <%= f.file_field :avatar, { :class => "form-control"} %>
                         </div>
+
+                        <div class="form-group">
+                            <%= f.label :video, "Upload a Video (optional)" %>
+                            <%= f.file_field :video, { :class => "form-control"} %>
+                        </div>
                     </div>
 
                     <%= f.submit "Submit my post", class: "btn btn-primary btn-lg btn-block" %>

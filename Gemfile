@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'rails_12factor', group: :production
 gem "paperclip", "~> 5.0.0"
+gem 'paperclip-av-transcoder'
 
 gem 'aws-sdk', '~> 1.36.1'
 gem 'fog' 
