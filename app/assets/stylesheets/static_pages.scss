@@ -212,6 +212,8 @@ p.copyright {
 @barHeight: 20px;
 @borders: #717D95;
 @primary: #59BAC0;
+@property: initial
+@degree: 0
 
 .transition (@property) {
   -webkit-transition: @property;
