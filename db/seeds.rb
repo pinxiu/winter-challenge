@@ -72,6 +72,7 @@ Mission.create!(name: 'Read "Living Faith" (Helen Roseveare)', points: 30, categ
 Mission.create!(name: 'Read "Living Holiness" (Helen Roseveare)', points: 30, category: equ)
 Mission.create!(name: 'Read "Living Fellowship" (Helen Roseveare)', points: 30, category: equ)
 Mission.create!(name: 'Read "Do Hard Things" (Alex Harris)', points: 30, category: equ)
+Mission.create!(name: 'Read "Stop Asking Jesus into Your Heart" (JD Greear)', points: 30, category: equ)
 Mission.create!(name: 'Read "Letters from a Skeptic" (Greg Boyd)', points: 50, category: equ)
 Mission.create!(name: 'Read "The Four Loves" (CS Lewis)', points: 50, category: equ)
 Mission.create!(name: 'Read "The Great Divorce" (CS Lewis)', points: 50, category: equ)
