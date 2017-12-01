@@ -41,8 +41,8 @@
             <div class="col-lg-5 col-sm-6">
                 <hr class="section-heading-spacer">
                 <div class="clearfix"></div>
-                <h2 class="section-heading">Objective</h2>
-                <p class="lead">Work your team up towards the target goal and outscore other teams along the way! Score points for your team by completing challenges, but be careful - there will be consequences for the team with the least points!</p>
+                <h2 class="section-heading">The Challenge</h2>
+                <p class="lead">Let's stir up one another to love and good works with some friendly competition. Complete various 'Christmas Challenges' to grow, serve others, and equip yourself, and compete with teams along the way! A special prize will be presented to the team with the highest number of points by the last weekend of winter break (Jan. 15) - the Homegroup Cup! *insert dramatic music here*</p>
             </div>
             <div class="col-lg-5 col-lg-offset-2 col-sm-6">
             	<hr class="section-heading-spacer">
@@ -53,7 +53,7 @@
                 		Completed a challenge? Great! Make your points count by logging it on this website!
                 	</li>
                     <li>
-                        Upload a photo, if possible!
+                        Upload a photo or video, if possible!
                     </li>
                 </ul>
             </div>
@@ -90,7 +90,7 @@
                             <%= f.select :team, options_for_select(["KJ HG Girls", "KJ HG Guys", "JI/BE HG Girls", "JI/BE HG Guys"]), {:prompt => 'Select Team'}, { :class => "form-control" } %>
                         </div>
                         <div class="form-group">
-                            <%= f.label :content, "Blurb (optional)" %>
+                            <%= f.label :content, "Blurb" %>
                             <%= f.text_area :content, { :class => "form-control", rows: "5"} %>
                         </div>
                     </div>
