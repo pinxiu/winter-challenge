@@ -85,7 +85,7 @@ class StaticPagesController < ApplicationController
 
       # @points = [[team, pointSum],...]
 
-      # @winner = @points.delete_at(0)
+      @winner = @points.delete_at(0)
 
       
 
