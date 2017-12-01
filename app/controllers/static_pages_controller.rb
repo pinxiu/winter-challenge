@@ -34,14 +34,14 @@ class StaticPagesController < ApplicationController
 
    	@comment = Comment.new
 
-      @sd = Mission.where(:category_id => Category.where(:mission_type => "Spiritual Growth").first.id)
+      @sg = Mission.where(:category_id => Category.where(:mission_type => "Spiritual Growth").first.id)
       @evangelism = Mission.where(:category_id => Category.where(:mission_type => "Evangelism").first.id)
       @ser = Mission.where(:category_id => Category.where(:mission_type => "Service/Gratitude").first.id)
       @eq = Mission.where(:category_id => Category.where(:mission_type => "Equipping").first.id)
    end
 
    def more
-   	@sd = Mission.where(:category_id => Category.where(:mission_type => "Spiritual Growth").first.id)
+   	@sg = Mission.where(:category_id => Category.where(:mission_type => "Spiritual Growth").first.id)
    	@evangelism = Mission.where(:category_id => Category.where(:mission_type => "Evangelism").first.id)
    	@service = Mission.where(:category_id => Category.where(:mission_type => "Service/Gratitude").first.id)
    	@equip = Mission.where(:category_id => Category.where(:mission_type => "Equipping").first.id)
