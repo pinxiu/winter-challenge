@@ -16,34 +16,15 @@
 //= require_tree .
 //= require bootstrap-sprockets
 
-// Produces width of .barChart
-$(document).ready(function() {
-  $('.graph-bar').each(function() {
-     var dataWidth = $(this).data('value');
-     $(this).css("width", dataWidth + "%");
-  });
-});
+var data = [4, 8, 15, 16, 23, 42];
 
-// Positioning of .bubbleChart
-$(document).ready(function() {
-  $('.chart-bubble').each(function() {
-    // Bubble Size
-    var bubbleSize = $(this).data('value');    
-    $(this).css("width", function() {
-      return (bubbleSize * 10) + "px"
-    });
-    $(this).css("height", function() {
-      return (bubbleSize * 10) + "px"
-    });
-    
-    // Bubble Position
-    var posX = $(this).data('x');
-    var posY = $(this).data('y');    
-    $(this).css("left", function() {
-      return posX - (bubbleSize * 0.5) + "%"
-    });
-    $(this).css("bottom", function() {
-      return posY - (bubbleSize * 0.5) + "%"
-    });
-  }); 
-});
+var x = d3.scale.linear()
+    .domain([0, d3.max(data)])
+    .range([0, 420]);
+
+d3.select(".chart")
+  .selectAll("div")
+    .data(data)
+  .enter().append("div")
+    .style("width", function(d) { return x(d) + "px"; })
+    .text(function(d) { return d; });
