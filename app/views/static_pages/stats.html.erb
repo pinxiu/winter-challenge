@@ -8,6 +8,18 @@
                 <div class="clearfix"></div>
                 <h2 class="section-heading">Stats</h2>
 
+
+                <h3 class="intro-count">
+                    <%= @winner[0] %>:
+                    <%= @winner[1] %>
+                </h3>
+
+                <% @points.each do |team| %>
+                    <h4 class="intro-count">
+                        <%= team[0] %>: 
+                        <%= team[1] %>
+                    </h4>
+                <% end %>
             </div>
         </div>
     </div>
