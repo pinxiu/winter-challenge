@@ -40,7 +40,7 @@ class StaticPagesController < ApplicationController
       @eq = Mission.where(:category_id => Category.where(:mission_type => "Equipping").first.id)
    end
 
-   def more
+   def challenges
    	@sg = Mission.where(:category_id => Category.where(:mission_type => "Spiritual Growth").first.id)
    	@evangelism = Mission.where(:category_id => Category.where(:mission_type => "Evangelism").first.id)
    	@service = Mission.where(:category_id => Category.where(:mission_type => "Service/Gratitude").first.id)
@@ -49,10 +49,10 @@ class StaticPagesController < ApplicationController
 
    def stats
       #@one = ['Kevan', 'Jon Kim', 'Will', 'Alex', 'Josh Joo', 'Kevin Stock', 'Daniel Liu', 'Godwin Law', 'Jonathan Chen']
-#      #@two = ['Jenny', 'Kat Kim', 'Alex', 'Adeline', 'Huizhen', 'Dasol', 'Vivian L', 'Jennifer Li', 'Stella Oh', 'Michelle Kim', 'Vanessa', 'Mira Chiu', 'Katherine Cai']
-#      #@three = ['Joe', 'Brian Jue', 'Ivan Yung', 'Jeff W', 'Nathan M', 'Andrew N.', 'Josh Kim', 'David Lee', 'Daniel Shan', 'Matt Estrada', 'Ben VDH', 'Noah Kang']
-#      #@four = ['Irene', 'Ellen Jue', 'San Yung', 'Joyce Cho', 'Joyce Han', 'Nancy P.', 'Claire Lee', 'Kristy J', 'Grace Park', 'Yvonne W', 'Micaela W']
-#
+      #@two = ['Jenny', 'Kat Kim', 'Alex', 'Adeline', 'Huizhen', 'Dasol', 'Vivian L', 'Jennifer Li', 'Stella Oh', 'Michelle Kim', 'Vanessa', 'Mira Chiu', 'Katherine Cai']
+      #@three = ['Joe', 'Brian Jue', 'Ivan Yung', 'Jeff W', 'Nathan M', 'Andrew N.', 'Josh Kim', 'David Lee', 'Daniel Shan', 'Matt Estrada', 'Ben VDH', 'Noah Kang']
+      #@four = ['Irene', 'Ellen Jue', 'San Yung', 'Joyce Cho', 'Joyce Han', 'Nancy P.', 'Claire Lee', 'Kristy J', 'Grace Park', 'Yvonne W', 'Micaela W']
+
       @totalCount = Comment.count
       one = Comment.where(:team => "KJ HG Girls").all
       two = Comment.where(:team => "KJ HG Guys").all
@@ -86,9 +86,6 @@ class StaticPagesController < ApplicationController
       # @points = [[team, pointSum],...]
 
       @winner = @points.delete_at(0)
-
-      
-
 
    end
 
