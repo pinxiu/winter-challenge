@@ -196,6 +196,13 @@ p.copyright {
     width: 100%;
 }
 
+// <---- for stats ---->
 
+@for $i from 1 through 100 {
+  .percentage-#{$i}:after {
+    $value: ($i * 1%);
+    width: $value;
+  }
+}
 
 
