@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root "static_pages#home"
-  get 'more', to: 'static_pages#more'
+  get 'challenges', to: 'static_pages#challenges'
   get 'completed', to: 'static_pages#completed'
   get 'stats', to: 'static_pages#stats'
   resources :comments, only: [:create]
