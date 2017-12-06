@@ -89,6 +89,8 @@ class StaticPagesController < ApplicationController
 
       @test = 20
       @test2 = 35
+      @test3 = 44
+      @test4 = 88
 
    end
 

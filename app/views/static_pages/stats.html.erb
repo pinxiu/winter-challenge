@@ -23,12 +23,12 @@
 
 
     <div class="container">
-        <header>
-            <h1>Pure <strong>CSS</strong> Bars</h1>
-            <p>...a growing bars chart.</p>
-        </header>
-        <div class="chart small-font-size">
-            <div class="bar bar-60 yellow">
+        <!-- <header>-->
+        <!--     <h1>Pure <strong>CSS</strong> Bars</h1>-->
+        <!--     <p>...a growing bars chart.</p>-->
+        <!-- </header>-->
+        <div class="chart big-font-size">
+            <div class="bar bar-<%= @test %> yellow">
                 <div class="face side-0">
                     <div class="growing-bar"></div>
                 </div>
@@ -38,7 +38,7 @@
                 <div class="face top"></div>
                 <div class="face floor"></div>
             </div>
-            <div class="bar bar-<%= @test %> red">
+            <div class="bar bar-<%= @test2 %> red">
                 <div class="face side-0">
                     <div class="growing-bar"></div>
                 </div>
@@ -48,7 +48,7 @@
                 <div class="face top"></div>
                 <div class="face floor"></div>
             </div>
-            <div class="bar bar-35 cyan">
+            <div class="bar bar-<%= @test3 %> cyan">
                 <div class="face side-0">
                     <div class="growing-bar"></div>
                 </div>
@@ -58,7 +58,7 @@
                 <div class="face top"></div>
                 <div class="face floor"></div>
             </div>
-            <div class="bar bar-<%= @test2 %> lime">
+            <div class="bar bar-<%= @test4 %> lime">
                 <div class="face side-0">
                     <div class="growing-bar"></div>
                 </div>
