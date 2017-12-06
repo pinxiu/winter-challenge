@@ -520,6 +520,7 @@ END // CHART'S RULES
 *
 */
 
+/*
 .legend
 {
     z-index: 100;
@@ -554,83 +555,4 @@ label
         border-radius: 0 .2em .2em 0;
     }
 }
-
-input[name='status']:checked + .content
-{
-    z-index: 10;
-    article
-    {
-        transform: translateX(0);
-        .chart .bar
-        {
-            &.bar-0
-            {
-                @extend .bar-75;
-            }
-            &.bar-1
-            {
-                @extend .bar-25;
-            }
-            &.bar-1-1
-            {
-                @extend .bar-55;
-            }
-            &.bar-2
-            {
-                @extend .bar-45;
-            }
-            &.bar-3
-            {
-                @extend .bar-85;
-            }
-            .growing-bar
-            {
-                transition-delay: .3s;
-                transition-duration: .6s;
-            }
-        }
-    }
-}
-
-input[id='status-1']:checked ~ .legend > label[for='status-1'],
-input[id='status-2']:checked ~ .legend > label[for='status-2'],
-input[id='status-3']:checked ~ .legend > label[for='status-3'],
-input[id='double-size']:checked ~ label[for='double-size']
-{
-    color: $lime;
-    border: 1px solid darken($navy, 15);
-    background-color: $navy;
-}
-input[id='double-size']:checked + .small-font-size
-{
-    font-size: 2em;
-}
-
-input[name='set-value']:checked ~ .content
-{
-    article
-    {
-        label[for='set-value']
-        {
-            color: $lime;
-            border: 1px solid darken($navy, 15);
-            background-color: $navy;
-        }
-        .chart .bar
-        {
-            &.bar-1,
-            &.bar-1-1
-            {
-                .face.side-0 .growing-bar,
-                .face.side-1 .growing-bar
-                {
-                    transform: translateY(100 - percentage(85/100));
-                    &:before
-                    {
-                        content: '85';
-                    }
-                }
-            }
-        }
-    }
-}
+*/
