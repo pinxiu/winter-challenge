@@ -206,7 +206,9 @@ p.copyright {
 
 @import 'compass/reset';
 @import 'compass/css3';
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
 $yellow: #f1c40f;
 $lime: #76c900;
 $navy: #0a4069;
@@ -216,7 +218,7 @@ $white: #fefefe;
 $gray: #444;
 $lightGray: lighten($gray, 30);
 
-body
+/*body
 {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -238,6 +240,8 @@ h2
 {
     margin-bottom: 3em;
 }
+*/
+
 em,
 strong
 {
