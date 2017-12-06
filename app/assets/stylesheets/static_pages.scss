@@ -364,7 +364,7 @@ $growColor: rgba($cyan, 1);
     position: relative;
 
     width: 2em;
-    padding: 1em;
+    padding: 2em;
 
     transition: transform 2s linear;
     transform: rotateX(-30deg) rotateY(-135deg);
@@ -518,41 +518,4 @@ $growColor: rgba($cyan, 1);
 END // CHART'S RULES
 *
 *
-*/
-
-/*
-.legend
-{
-    z-index: 100;
-    display: flex;
-    flex-direction: row;
-
-    justify-content: center;
-}
-label
-{
-    box-sizing: border-box;
-    padding: 1em;
-
-    cursor: pointer;
-    transition: all .15s ease-in-out;
-
-    color: $navy;
-    border: 1px solid rgba($white, .6);
-    border-radius: 0;
-
-    flex: 0 0 6em;
-    &:first-child
-    {
-        margin-right: 0;
-
-        border-radius: .2em 0 0 .2em;
-    }
-    &:last-child
-    {
-        margin-left: 0;
-
-        border-radius: 0 .2em .2em 0;
-    }
-}
 */
