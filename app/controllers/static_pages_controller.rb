@@ -87,11 +87,6 @@ class StaticPagesController < ApplicationController
 
       @winner = @points.delete_at(0)
 
-      @test = 20
-      @test2 = 35
-      @test3 = 44
-      @test4 = 88
-
    end
 
    def completed
