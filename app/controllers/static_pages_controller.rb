@@ -39,6 +39,8 @@ class StaticPagesController < ApplicationController
 	 @comment = Comment.new
 	end	
 
+   end
+
    def challenges
    	@sg = Mission.where(:category_id => Category.where(:mission_type => "Spiritual Growth").first.id)
    	@evangelism = Mission.where(:category_id => Category.where(:mission_type => "Evangelism").first.id)
