@@ -13,11 +13,12 @@ class StaticPagesController < ApplicationController
 	@fourSum = 0;
 	@fiveSum = 0;
 	@sixSum = 0;
-
-   	one.each do |post|
-   		@oneSum += post.mission.points
-   	end
-
+    
+       
+   	  one.each do |post|
+   		 @oneSum += post.mission.points
+      end
+       
       two.each do |post|
          @twoSum += post.mission.points
       end
@@ -29,14 +30,20 @@ class StaticPagesController < ApplicationController
       four.each do |post|
          @fourSum += post.mission.points
       end
-
+       
+      five.each do |post|
+         @fiveSum += post.mission.points
+      end       
+    
+      six.each do |post|
+         @sixSum += post.mission.points
+      end
       @points = [['A2F Bros', @oneSum], ['A2F Sis', @twoSum], ['Klesis Bros', @threeSum], ['Klesis Sis', @fourSum], ['MakeNew Bros', @fiveSum], ['MakeNew Sis', @sixSum]].sort do |a, b|
          b[1] <=> a[1]
       end
 
       @winner = @points.delete_at(0)
 	 @comment = Comment.new
-      end
 
    end
 
