@@ -96,10 +96,6 @@
                 
 
                     <div class="col-lg-6">
-                        <% if @challenges.blank? %>
-                        <% puts @challenges.inspect %>
-                        <% puts f.inspect %>
-                        <% else %>
                         <div class="form-group">
                             <%= f.label :mission_id, "Challenge" %>
 
@@ -127,7 +123,6 @@
                                 </optgroup>
                             </select>
                         </div>
-                        <% end %>
 
                         <div class="form-group">
                             <%= f.label :avatar, "Upload a Picture (optional, but recommended)" %>
