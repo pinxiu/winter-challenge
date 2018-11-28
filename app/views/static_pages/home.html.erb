@@ -143,6 +143,8 @@
                     <% end %>
 
                     <% if @f.blank? %>
+                    <p> no form to submit</p>
+                    <% else %>
                     <%= f.submit "Submit my post", class: "btn btn-primary btn-lg btn-block" %>
                     <% end %>
                 <% end %>
