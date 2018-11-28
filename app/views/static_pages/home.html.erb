@@ -75,6 +75,9 @@
 
         <div class="row">
             <div class="col-lg-12">
+                <% if @comment.blank? %>
+                <p> There are currently no comments.</p>
+                <% else %>
                 <%= form_for @comment, :html => {:role => 'form'} do |f| %>
 
                     <div class="col-lg-6">
@@ -93,8 +96,12 @@
                             <%= f.text_area :content, { :class => "form-control", rows: "5"} %>
                         </div>
                     </div>
+                <% end %>
 
                     <div class="col-lg-6">
+                        <% if @challenges.blank? %>
+                        <p> There are no available challenges.</p>
+                        <% else %>
                         <div class="form-group">
                             <%= f.label :mission_id, "Challenge" %>
 
@@ -133,6 +140,7 @@
                             <%= f.file_field :video, { :class => "form-control"} %>
                         </div>
                     </div>
+                    <% end %>
 
                     <%= f.submit "Submit my post", class: "btn btn-primary btn-lg btn-block" %>
                 <% end %>
