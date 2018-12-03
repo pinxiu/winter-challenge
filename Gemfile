@@ -58,6 +58,7 @@ gem "figaro"
 
 gem 'will_paginate', '~> 3.1.0'
 gem 'bootstrap-will_paginate'
+gem 'lato-rails'
 
 
 group :development, :test do
