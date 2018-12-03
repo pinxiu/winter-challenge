@@ -40,7 +40,6 @@
 								        <div></div>
 								<% end %>
                             </div>
-                            <hr>
                             <div class="comment-content">
    								<% if comment.content != nil %>
 									<%= comment.content %>
@@ -52,58 +51,7 @@
                     <% end %>
                     
                     
-                    
-                    
-                    
-                    
                     </div>
-					<table class="table table-striped table-bordered">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Team</th>
-								<th>Challenge</th>
-								<th>Blurb</th>
-								<th>Image</th>
-								<th>Video</th>
-							</tr>
-						</thead>
-						<% @comments.each do |comment| %>
-							<tr>
-								<td>
-									<div><%= comment.name %></div>
-									<div> - </div>
-									<div><%= comment.created_at.to_time.strftime('%B %e at %l:%M %p') %></div>
-								</td>
-								<td>
-									<%= comment.team %>
-								</td>
-								<td>
-									<%= comment.mission.name %> - 
-									<%= comment.mission.points %> points
-								</td>
-								<td>
-								<% if comment.content != nil %>
-									<%= comment.content %>
-								<% end %>
-								</td>
-								<td>
-								<% if comment.avatar.file? %>							
-										<%=link_to image_tag(comment.avatar.url(:original)), comment.avatar.url(:original), :popup=>['original_image', 'height=700,width=900'] %>	
-								<% else %>
-										<div></div>
-								<% end %>
-								</td>
-								<td>
-								<% if comment.video.file? %>			
-										<%=link_to image_tag(comment.video.url(:original)), comment.video.url(:original), :popup=>['original_image', 'height=700,width=900'] %>	
-								<% else %>
-										<div></div>
-								<% end %>
-								</td>
-							</tr>
-						<% end %>	
-					</table>
 				</div>
 			</div>
 		</div>
