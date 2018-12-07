@@ -39,10 +39,12 @@ class Comment < ApplicationRecord
     
     def is_type_of_video?
         avatar.content_type =~ %r(video)
+        comment.media_point = 10
     end
 
     def is_type_of_image?
         avatar.content_type =~ %r(image)
+        comment.media_point = 5
     end
 
     private
