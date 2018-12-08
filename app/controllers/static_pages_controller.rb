@@ -7,17 +7,39 @@ class StaticPagesController < ApplicationController
    	@oneSum = 0;
    	@twoSum = 0;
 	@threeSum = 0;
+    
 
    	one.each do |post|
-   		@oneSum += post.mission.points
+   		@oneSum += post.mission.points 
+        if post.is_type_of_video? 
+            @oneSum += 10
+        elsif post.is_type_of_image?
+            @oneSum += 5
+        else 
+            @oneSum += 0
+        end
    	end
 
     two.each do |post|
         @twoSum += post.mission.points
+        if post.is_type_of_video? 
+            @twoSum += 10
+        elsif post.is_type_of_image?
+            @twoSum += 5
+        else 
+            @twoSum += 0
+        end
     end
 
     three.each do |post|
         @threeSum += post.mission.points
+        if post.is_type_of_video? 
+            @threeSum += 10
+        elsif post.is_type_of_image?
+            @threeSum += 5
+        else 
+            @threeSum += 0
+        end
     end
 
 
@@ -57,17 +79,38 @@ class StaticPagesController < ApplicationController
       @threeSum = 0;
 
 
-      one.each do |post|
-         @oneSum += post.mission.points
-      end
+   	one.each do |post|
+   		@oneSum += post.mission.points 
+        if post.is_type_of_video? 
+            @oneSum += 10
+        elsif post.is_type_of_image?
+            @oneSum += 5
+        else 
+            @oneSum += 0
+        end
+   	end
 
-      two.each do |post|
-         @twoSum += post.mission.points
-      end
+    two.each do |post|
+        @twoSum += post.mission.points
+        if post.is_type_of_video? 
+            @twoSum += 10
+        elsif post.is_type_of_image?
+            @twoSum += 5
+        else 
+            @twoSum += 0
+        end
+    end
 
-      three.each do |post|
-         @threeSum += post.mission.points
-      end
+    three.each do |post|
+        @threeSum += post.mission.points
+        if post.is_type_of_video? 
+            @threeSum += 10
+        elsif post.is_type_of_image?
+            @threeSum += 5
+        else 
+            @threeSum += 0
+        end
+    end
 
 
       @points = [['A2F', @oneSum], ['Klesis', @twoSum], ['MakeNew', @threeSum]].sort do |a, b|
