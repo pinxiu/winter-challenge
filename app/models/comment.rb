@@ -12,7 +12,7 @@ class Comment < ApplicationRecord
 
 	has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" },
 	:url  => ":s3_domain_url",
-    :s3_region: ENV.fetch("AWS_REGION"),
+    :s3_region => ENV.fetch("AWS_REGION"),
     :s3_host_name => ENV["S3_HOST_NAME"],
     :path => "public/avatars/:id/:style_:basename.:extension",
     :storage => :fog,
