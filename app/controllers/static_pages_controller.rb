@@ -9,15 +9,15 @@ class StaticPagesController < ApplicationController
 	@threeSum = 0;
 
    	one.each do |post|
-   		@oneSum += post.mission.points + comments.media_point
+   		@oneSum += post.mission.points
    	end
 
     two.each do |post|
-        @twoSum += post.mission.points  + comments.media_point
+        @twoSum += post.mission.points
     end
 
     three.each do |post|
-        @threeSum += post.mission.points  + comments.media_point
+        @threeSum += post.mission.points
     end
 
 
@@ -58,15 +58,15 @@ class StaticPagesController < ApplicationController
 
 
       one.each do |post|
-         @oneSum += post.mission.points + comments.media_point
+         @oneSum += post.mission.points
       end
 
       two.each do |post|
-         @twoSum += post.mission.points + comments.media_point
+         @twoSum += post.mission.points
       end
 
       three.each do |post|
-         @threeSum += post.mission.points + comments.media_point
+         @threeSum += post.mission.points
       end
 
 
