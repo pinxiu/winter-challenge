@@ -42,7 +42,7 @@ class Comment < ApplicationRecord
 
     
     def is_type_of_video?
-        avatar.content_type =~ %r(video)
+        video.content_type =~ %r(video)
     end
 
     def is_type_of_image?
