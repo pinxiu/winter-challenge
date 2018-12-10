@@ -23,8 +23,7 @@ class Comment < ApplicationRecord
     },
     fog_directory: ENV["FOG_DIRECTORY"]
 
-    has_attached_file :video, styles: {
-    :thumb => { :geometry => "400x400#", :format => 'jpg', :time => 10 }},  
+    has_attached_file :video, styles: {:thumb => ["400x400#", :jpg]},
     :processors => [:transcoder],
     :url  => ":s3_domain_url",
     :s3_region => "us-east-1",
