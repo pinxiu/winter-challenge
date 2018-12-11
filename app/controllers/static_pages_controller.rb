@@ -78,7 +78,6 @@ class StaticPagesController < ApplicationController
       @twoSum = 0;
       @threeSum = 0;
 
-
    	one.each do |post|
    		@oneSum += post.mission.points 
         if post.is_type_of_video? 
@@ -111,7 +110,7 @@ class StaticPagesController < ApplicationController
             @threeSum += 0
         end
     end
-
+       
 
       @points = [['A2F', @oneSum], ['Klesis', @twoSum], ['MakeNew', @threeSum]].sort do |a, b|
          b[1] <=> a[1]
@@ -120,7 +119,10 @@ class StaticPagesController < ApplicationController
       # @points = [[team, pointSum],...]
 
       @winner = @points.delete_at(0)
-
+       
+       @barOne = @oneSum + 5
+       @barTwo = @twoSum + 5
+       @barThree = @threeSum + 5
    end
 
    def completed
