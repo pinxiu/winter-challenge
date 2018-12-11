@@ -30,7 +30,7 @@
                             <div class="comment-timestamp"> <%= comment.created_at.to_time.strftime('%B %e at %l:%M %p') %></div>
                             <div class="comment-media">
                                 <% if comment.video.file? %>
-                                    Video:
+                                    Click to see the video:
                                     <%=link_to image_tag(comment.video.url(:thumb)), comment.video.url(:original), :popup=>['original_image', 'height=700,width=900'] %>	
 								<% else %>
 										<div></div>
