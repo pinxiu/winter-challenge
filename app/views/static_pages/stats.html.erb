@@ -21,15 +21,27 @@
 <svg class="chart" width="420" height="150" aria-labelledby="title desc" role="img">
   <title id="title">Winning Team</title>
   <desc id="desc">A2F, Klesis, MakeNew</desc>
+<%= @team[0] = 'A2F' %>
+  <g class="bar-winner">
+<% else %>
   <g class="bar">
+<% end %>
     <rect width="<%= @oneSum %>" height="19"></rect>
     <text x="<%= @barOne %>" y="9.5" dy=".35em">A2F</text>
   </g>
+<%= @team[0] = 'Klesis' %>
+  <g class="bar-winner">
+<% else %>
   <g class="bar">
+<% end %>
     <rect width="<%= @twoSum %>" height="19" y="20"></rect>
     <text x="<%= @barTwo %>" y="28" dy=".35em">Klesis</text>
   </g>
+<%= @team[0] = 'MakeNew' %>
+  <g class="bar-winner">
+<% else %>
   <g class="bar">
+<% end %>
     <rect width="<%= @threeSum %>" height="19" y="40"></rect>
     <text x="<%= @barThree %>" y="48" dy=".35em">MakeNew</text>
   </g>

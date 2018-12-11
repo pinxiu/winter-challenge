@@ -123,6 +123,7 @@ class StaticPagesController < ApplicationController
        @barOne = @oneSum + 5
        @barTwo = @twoSum + 5
        @barThree = @threeSum + 5
+       
    end
 
    def completed
