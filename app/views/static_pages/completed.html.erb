@@ -27,7 +27,7 @@
                     <% @comments.each do |comment| %>
                         <div class="all-comments">
                             <div class="comment-name"> <%= comment.name %> - <%= comment.team %> </div>
-                            <div class="comment-timestamp"> <%= comment.created_at.to_time.strftime('%B %e at %l:%M %p') %></div>
+                            <div class="comment-timestamp"> <%= comment.created_at.to_time.strftime('%B %e at %l:%M %p').in_time_zone %></div>
                             <div class="comment-media">
                                 <% if comment.video.file? %>
                                     Click to see the video:
