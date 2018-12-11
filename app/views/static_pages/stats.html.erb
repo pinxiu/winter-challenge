@@ -5,33 +5,21 @@
                 <hr class="section-heading-spacer">
                 <div class="clearfix"></div>
                 <h2 class="section-heading">Stats</h2>
-
-                <h3 class="section-heading"> <!-- <h3 class="intro-count"> -->
-                    <%= @winner[0] %>:
-                    <%= @winner[1] %>
-                </h3>
-
-                <% @points.each do |team| %>
-                    <h4 class="section-heading"> <!-- <h4 class="intro-count"> -->
-                        <%= team[0] %>: 
-                        <%= team[1] %>
-                    </h4>
-                <% end %>
                 
 <svg class="chart" width="420" height="200" aria-labelledby="title desc" role="img">
   <title id="title">Winning Team</title>
   <desc id="desc">A2F, Klesis, MakeNew</desc>
   <g class="bar">
-    <rect width="<%= @oneSum %>" height="49"></rect>
-    <text x="<%= @barOne %>" y="24.5" dy=".35em">A2F</text>
+    <rect width="<%= @oneSum %>" height="99"></rect>
+    <text x="<%= @barOne %>" y="49.5" dy=".35em">A2F - <%= @oneSum %></text>
   </g>
   <g class="bar">
-    <rect width="<%= @twoSum %>" height="49" y="50"></rect>
-    <text x="<%= @barTwo %>" y="73" dy=".35em">Klesis</text>
+    <rect width="<%= @twoSum %>" height="99" y="100"></rect>
+    <text x="<%= @barTwo %>" y="149" dy=".35em">Klesis - <%= @twoSum %></text>
   </g>
   <g class="bar">
-    <rect width="<%= @threeSum %>" height="49" y="100"></rect>
-    <text x="<%= @barThree %>" y="123" dy=".35em">MakeNew</text>
+    <rect width="<%= @threeSum %>" height="99" y="200"></rect>
+    <text x="<%= @barThree %>" y="249" dy=".35em">MakeNew - <%= @threeSum %></text>
   </g>
 </svg>
             </div>
