@@ -19,7 +19,7 @@ Mission.create!(name: 'Do chores (laundry, dishes, take out the trash) at home (
 Mission.create!(name: 'Write a "Thank you" note to someone who is not your peer', points: 20, category: ser)
 Mission.create!(name: 'Learn a new dish', points: 20, category: ser)
 Mission.create!(name: '10 Days of Gratitude Journal (10 entries/day)', points: 50, category: ser)
-Mission.create!(name: 'Host Dinner for Your Family and/or Friends)', points: 60, category: ser)
+Mission.create!(name: 'Host Dinner for Your Family and/or Friends', points: 60, category: ser)
 
 
 # evangelism
