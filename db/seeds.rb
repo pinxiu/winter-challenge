@@ -34,7 +34,7 @@ Mission.create!(name: 'Lead a bible study with a non-Christian friend or family 
 # spiritual growth
 Mission.create!(name: 'Read Bible (20 Chapters)', points: 20, category: sg)
 Mission.create!(name: 'Memorize a Psalm', points: 25, category: sg)
-Mission.create!(name: 'Video Chat with a peer of LG: Share prayer requests or DT', points: 50, category: sg)
+Mission.create!(name: 'Video Chat with a peer of your LG: Share prayer requests or DT', points: 50, category: sg)
 Mission.create!(name: '10 consecutive days of DT', points: 50, category: sg)
 Mission.create!(name: 'Outline all 4 Gospels', points: 50, category: sg)
 Mission.create!(name: 'Read a Christian book: Write a blurb about it!', points: 50, category: sg)
@@ -44,7 +44,7 @@ Mission.create!(name: '10 Min Prayer Daily for a week', points: 50, category: sg
 
 # physical equipping
 Mission.create!(name: '35 push-ups / day', points: 5, category: equ)
-Mission.create!(name: 'GO running! 10 pts / 1 mile', points: 10, category: equ)
+Mission.create!(name: 'GO running! (10 pts / 1 mile)', points: 10, category: equ)
 Mission.create!(name: 'Join 7 minute workout app, add your LG and do a workout together (in person or via video chat)', points: 25, category: equ)
 Mission.create!(name: '5 Day Social/Video Media Fast ', points: 50, category: equ)
 Mission.create!(name: '1,000 Pushups (Honor System)', points: 70, category: equ)
