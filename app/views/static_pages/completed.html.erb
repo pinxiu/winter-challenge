@@ -39,7 +39,11 @@
                                 <% if comment.video.file? %>
                                     Watch the Video Below:
                                     <br>
+                                    <% if comment.video.is_mp4? %>
                                     <%=link_to image_tag(comment.video.url(:thumb)), comment.video.url(:mp4video), :popup=>['original_image', 'height=700,width=900'] %>	
+                                    <% else %>
+                                    <%=link_to image_tag(comment.video.url(:thumb)), comment.video.url(:original), :popup=>['original_image', 'height=700,width=900'] %>	
+                                    <% end %>
                                 <% elsif comment.avatar.file? %>						
 								    <%=link_to image_tag(comment.avatar.url(:medium)), comment.avatar.url(:original), :popup=>['original_image', 'height=700,width=900'] %>	
 								<% else %>

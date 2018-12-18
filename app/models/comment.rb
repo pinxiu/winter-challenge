@@ -55,6 +55,10 @@ class Comment < ApplicationRecord
     def is_type_of_image?
         avatar.content_type =~ %r(image)
     end
+    
+    def is_mp4?
+        defined?(comment.video.url(:mp4video))
+    end
 
     private
     def strip_whitespace
