@@ -28,20 +28,6 @@
                         <div class="all-comments">
                             <div class="comment-name"> <%= comment.name %> - <%= comment.team %> </div>
                             <div class="comment-timestamp"> <%= comment.created_at.in_time_zone.to_time.strftime('%B %e at %l:%M %p') %></div>
-                            <div class="comment-media">
-                                <% if comment.video.file? %>
-                                    Watch the Video Below:
-                                    <br>
-                                    <%=link_to image_tag(comment.video.url(:thumb)), comment.video.url(:original), :popup=>['original_image', 'height=700,width=900'] %>	
-								<% else %>
-										<div></div>
-								<% end %>
-                                <% if comment.avatar.file? %>							
-								    <%=link_to image_tag(comment.avatar.url(:original)), comment.avatar.url(:original), :popup=>['original_image', 'height=700,width=900'] %>	
-								<% else %>
-								        <div></div>
-								<% end %>
-                            </div>
                             <div class="comment-content">
    								<% if comment.content != nil %>
 									<%= comment.content %>
@@ -49,6 +35,18 @@
                                 <hr>
                                 Challenge: <%= comment.mission.name %> - <%= comment.mission.points %> points
                             </div>
+                            <div class="comment-media">
+                                <% if comment.video.file? %>
+                                    Watch the Video Below:
+                                    <br>
+                                    <%=link_to image_tag(comment.video.url(:thumb)), comment.video.url(:mp4video), :popup=>['original_image', 'height=700,width=900'] %>	
+                                <% elsif comment.avatar.file? %>						
+								    <%=link_to image_tag(comment.avatar.url(:medium)), comment.avatar.url(:original), :popup=>['original_image', 'height=700,width=900'] %>	
+								<% else %>
+								        <div></div>
+								<% end %>
+                            </div>
+
                         </div>
                         <br>
                         <br>

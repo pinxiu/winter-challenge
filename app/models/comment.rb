@@ -10,7 +10,7 @@ class Comment < ApplicationRecord
     before_validation :force_names
 
 
-	has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" },
+	has_attached_file :avatar, styles: { medium: "900x506>", thumb: "100x100>" },
 	:url  => ":s3_domain_url",
     :s3_region => "us-east-1",
     :s3_host_name => ENV["S3_HOST_NAME"],
@@ -23,7 +23,14 @@ class Comment < ApplicationRecord
     },
     fog_directory: ENV["FOG_DIRECTORY"]
 
-    has_attached_file :video, styles: {:thumb => ["900x506>", :jpg]},
+    has_attached_file :video, styles: {
+        :thumb => {["900x506>", :jpg]},
+        :mp4video => {
+            :geometry => "1280x720",
+            :format => 'mp4',
+            :convert_options => {:output =>{:ar => 44100}
+            }}
+    },
     :processors => [:transcoder],
     :url  => ":s3_domain_url",
     :s3_region => "us-east-1",

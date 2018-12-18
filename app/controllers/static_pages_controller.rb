@@ -120,9 +120,13 @@ class StaticPagesController < ApplicationController
 
       @winner = @points.delete_at(0)
        
-       @barOne = @oneSum + 5
-       @barTwo = @twoSum + 5
-       @barThree = @threeSum + 5
+       @oneStat = @oneSum / 20
+       @twoStat = @twoSum / 20
+       @threeStat = @threeSum / 20
+       
+       @barOne = @oneStat + 5
+       @barTwo = @twoStat + 5
+       @barThree = @threeStat + 5
        
    end
 
