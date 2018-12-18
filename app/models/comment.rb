@@ -24,7 +24,7 @@ class Comment < ApplicationRecord
     fog_directory: ENV["FOG_DIRECTORY"]
 
     has_attached_file :video, styles: {
-        :thumb => {["900x506>", :jpg]},
+        :thumb => ["900x506>", :jpg],
         :mp4video => {
             :geometry => "1280x720",
             :format => 'mp4',
