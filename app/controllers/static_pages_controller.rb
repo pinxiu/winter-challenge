@@ -9,10 +9,10 @@ class StaticPagesController < ApplicationController
 	@threeSum = 0;
            
    	one.each do |post|
-        if post.multiplier == ""
-            post.multiplier = 1;
-        else 
-            post.multiplier = Integer(post.multiplier);
+        post.multiplier = begin
+            Integer(post.multiplier);
+        rescue
+            1
         end
         
    		@oneSum += post.mission.points * post.multiplier
@@ -26,10 +26,10 @@ class StaticPagesController < ApplicationController
    	end
 
     two.each do |post|
-        if Comment.multiplier == ""
-            Comment.multiplier = 1;
-        else 
-            Comment.multiplier = Integer(post.multiplier);
+        post.multiplier = begin
+            Integer(post.multiplier);
+        rescue
+            1
         end
         
         @twoSum += post.mission.points * post.multiplier
@@ -43,10 +43,10 @@ class StaticPagesController < ApplicationController
     end
 
     three.each do |post|
-        if post.multiplier == ""
-            post.multiplier = 1;
-        else 
-            post.multiplier = Integer(post.multiplier);
+        post.multiplier = begin
+            Integer(post.multiplier);
+        rescue
+            1
         end
         
         @threeSum += post.mission.points * post.multiplier
@@ -96,10 +96,10 @@ class StaticPagesController < ApplicationController
       @threeSum = 0;
 
    	one.each do |post|
-        if post.multiplier == ""
-            post.multiplier = 1;
-        else 
-            post.multiplier = Integer(post.multiplier);
+        post.multiplier = begin
+            Integer(post.multiplier);
+        rescue
+            1
         end
         
    		@oneSum += post.mission.points 
@@ -113,10 +113,10 @@ class StaticPagesController < ApplicationController
    	end
 
     two.each do |post|
-        if post.multiplier == ""
-            post.multiplier = 1;
-        else 
-            post.multiplier = Integer(post.multiplier);
+        post.multiplier = begin
+            Integer(post.multiplier);
+        rescue
+            1
         end
         
         @twoSum += post.mission.points
@@ -130,10 +130,10 @@ class StaticPagesController < ApplicationController
     end
 
     three.each do |post|
-        if post.multiplier == ""
-            post.multiplier = 1;
-        else 
-            post.multiplier = Integer(post.multiplier);
+        post.multiplier = begin
+            Integer(post.multiplier);
+        rescue
+            1
         end
         
         @threeSum += post.mission.points * post.multiplier
