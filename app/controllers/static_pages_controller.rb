@@ -12,7 +12,7 @@ class StaticPagesController < ApplicationController
         if post.multiplier == ""
             post.multiplier = 1;
         else 
-            post.multiplier = Float(post.multiplier);
+            post.multiplier = Integer(post.multiplier);
         end
         
    		@oneSum += post.mission.points * post.multiplier
@@ -29,7 +29,7 @@ class StaticPagesController < ApplicationController
         if Comment.multiplier == ""
             Comment.multiplier = 1;
         else 
-            Comment.multiplier = Float(post.multiplier);
+            Comment.multiplier = Integer(post.multiplier);
         end
         
         @twoSum += post.mission.points * post.multiplier
@@ -46,7 +46,7 @@ class StaticPagesController < ApplicationController
         if post.multiplier == ""
             post.multiplier = 1;
         else 
-            post.multiplier = Float(post.multiplier);
+            post.multiplier = Integer(post.multiplier);
         end
         
         @threeSum += post.mission.points * post.multiplier
@@ -99,7 +99,7 @@ class StaticPagesController < ApplicationController
         if post.multiplier == ""
             post.multiplier = 1;
         else 
-            post.multiplier = Float(post.multiplier);
+            post.multiplier = Integer(post.multiplier);
         end
         
    		@oneSum += post.mission.points 
@@ -116,7 +116,7 @@ class StaticPagesController < ApplicationController
         if post.multiplier == ""
             post.multiplier = 1;
         else 
-            post.multiplier = Float(post.multiplier);
+            post.multiplier = Integer(post.multiplier);
         end
         
         @twoSum += post.mission.points
@@ -133,7 +133,7 @@ class StaticPagesController < ApplicationController
         if post.multiplier == ""
             post.multiplier = 1;
         else 
-            post.multiplier = Float(post.multiplier);
+            post.multiplier = Integer(post.multiplier);
         end
         
         @threeSum += post.mission.points * post.multiplier
