@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   def create
-    @comment = Comment.new(comment_params)
-    if @comment.save
+    comment = Comment.new(comment_params)
+    if comment.save
       flash[:success] = "Comment posted! Your progress has been logged."
       redirect_to root_url
     else
@@ -13,6 +13,6 @@ class CommentsController < ApplicationController
 
   private
     def comment_params
-      params.require(:comment).permit(:name, :team, :mission_id, :content, :avatar, :video)
+      params.require(:comment).permit(:name, :team, :mission_id, :content, :avatar, :video, :multiplier)
     end
 end

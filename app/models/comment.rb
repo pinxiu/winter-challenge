@@ -6,6 +6,7 @@ class Comment < ApplicationRecord
 	validates :name, presence: true, length: {maximum: 50}
 	validates :team, presence: true
     validates :content, presence: true
+    validates :multiplier, presence: true
     before_validation :strip_whitespace
     before_validation :force_names
 
