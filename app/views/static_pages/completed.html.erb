@@ -18,6 +18,7 @@
 					<% end %>
 					</h4>
 				</div>
+                <div class="flex">
 				<div class="all-comments">
 					<div class="pagination">
 					<%= will_paginate @comments %>
@@ -39,7 +40,7 @@
                                 <% if comment.video.file? %>
                                     Watch the Video Below:
                                     <br>
-                                    <% if defined?(comment.video.url(:mp4video)) %>
+                                    <% if defined?(comment.video.file?(:mp4video)) %>
                                     <%=link_to image_tag(comment.video.url(:thumb)), comment.video.url(:mp4video), :popup=>['original_image', 'height=700,width=900'] %>	
                                     <% else %>
                                     <%=link_to image_tag(comment.video.url(:thumb)), comment.video.url(:original), :popup=>['original_image', 'height=700,width=900'] %>	
@@ -59,6 +60,7 @@
                     
                     </div>
 				</div>
+                </div>
 			</div>
 		</div>
 	</div>
