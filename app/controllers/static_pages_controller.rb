@@ -21,43 +21,43 @@ class StaticPagesController < ApplicationController
         if post.is_type_of_video? 
             @oneSum += 10 * @multiply
         elsif post.is_type_of_image?
-            @oneSum += 5 * @multiple
+            @oneSum += 5 * @multiply
         else 
             @oneSum += 0 * @multiply
         end
    	end
 
     two.each do |post|
-        post.multiplier = begin
+        @multiply = begin
             Integer(post.multiplier)
         rescue
             1
         end
         
-        @twoSum += post.mission.points * post.multiplier
+        @twoSum += post.mission.points * @multiply
         if post.is_type_of_video? 
-            @twoSum += 10 * post.multiplier
+            @twoSum += 10 * @multiply
         elsif post.is_type_of_image?
-            @twoSum += 5 * post.multiplier
+            @twoSum += 5 * @multiply
         else 
-            @twoSum += 0 * post.multiplier
+            @twoSum += 0 * @multiply
         end
     end
 
     three.each do |post|
-        post.multiplier = begin
+        @multiply = begin
             Integer(post.multiplier)
         rescue
             1
         end
         
-        @threeSum += post.mission.points * post.multiplier
+        @threeSum += post.mission.points * @multiply
         if post.is_type_of_video? 
-            @threeSum += 10 * post.multiplier
+            @threeSum += 10 * @multiply
         elsif post.is_type_of_image?
-            @threeSum += 5 * post.multiplier
+            @threeSum += 5 * @multiply
         else 
-            @threeSum += 0 * post.multiplier
+            @threeSum += 0 * @multiply
         end
     end
 
@@ -98,7 +98,7 @@ class StaticPagesController < ApplicationController
       @threeSum = 0;
 
    	one.each do |post|
-        post.multiplier = begin
+        @multiply = begin
             Integer(post.multiplier)
         rescue
             1
@@ -106,16 +106,16 @@ class StaticPagesController < ApplicationController
         
    		@oneSum += post.mission.points 
         if post.is_type_of_video? 
-            @oneSum += 10 * post.multiplier
+            @oneSum += 10 * @multiply
         elsif post.is_type_of_image?
-            @oneSum += 5 * post.multiplier
+            @oneSum += 5 * @multiply
         else 
-            @oneSum += 0 * post.multiplier
+            @oneSum += 0 * @multiply
         end
    	end
 
     two.each do |post|
-        post.multiplier = begin
+        @multiply = begin
             Integer(post.multiplier)
         rescue
             1
@@ -123,16 +123,16 @@ class StaticPagesController < ApplicationController
         
         @twoSum += post.mission.points
         if post.is_type_of_video? 
-            @twoSum += 10 * post.multiplier
+            @twoSum += 10 * @multiply
         elsif post.is_type_of_image?
-            @twoSum += 5 * post.multiplier
+            @twoSum += 5 * @multiply
         else 
-            @twoSum += 0 * post.multiplier
+            @twoSum += 0 * @multiply
         end
     end
 
     three.each do |post|
-        post.multiplier = begin
+        @multiply = begin
             Integer(post.multiplier)
         rescue
             1
@@ -140,11 +140,11 @@ class StaticPagesController < ApplicationController
         
         @threeSum += post.mission.points * post.multiplier
         if post.is_type_of_video? 
-            @threeSum += 10 * post.multiplier
+            @threeSum += 10 * @multiply
         elsif post.is_type_of_image?
-            @threeSum += 5 * post.multiplier
+            @threeSum += 5 * @multiply
         else 
-            @threeSum += 0 * post.multiplier
+            @threeSum += 0 * @multiply
         end
     end
        
