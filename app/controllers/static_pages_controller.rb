@@ -7,38 +7,55 @@ class StaticPagesController < ApplicationController
    	@oneSum = 0;
    	@twoSum = 0;
 	@threeSum = 0;
-    
-
+           
    	one.each do |post|
-   		@oneSum += post.mission.points 
-        if post.is_type_of_video? 
-            @oneSum += 10
-        elsif post.is_type_of_image?
-            @oneSum += 5
+        if Comment.multiplier == ""
+            Comment.multiplier = 1;
         else 
-            @oneSum += 0
+            Comment.multiplier = Comment.multiplier.to_i;
+        end
+        
+   		@oneSum += post.mission.points * Comment.multiplier
+        if post.is_type_of_video? 
+            @oneSum += 10 * Comment.multiplier
+        elsif post.is_type_of_image?
+            @oneSum += 5 * Comment.multiplier
+        else 
+            @oneSum += 0 * Comment.multiplier
         end
    	end
 
     two.each do |post|
-        @twoSum += post.mission.points
-        if post.is_type_of_video? 
-            @twoSum += 10
-        elsif post.is_type_of_image?
-            @twoSum += 5
+        if Comment.multiplier == ""
+            Comment.multiplier = 1;
         else 
-            @twoSum += 0
+            Comment.multiplier = Comment.multiplier.to_i;
+        end
+        
+        @twoSum += post.mission.points * Comment.multiplier
+        if post.is_type_of_video? 
+            @twoSum += 10 * Comment.multiplier
+        elsif post.is_type_of_image?
+            @twoSum += 5 * Comment.multiplier
+        else 
+            @twoSum += 0 * Comment.multiplier
         end
     end
 
     three.each do |post|
-        @threeSum += post.mission.points
-        if post.is_type_of_video? 
-            @threeSum += 10
-        elsif post.is_type_of_image?
-            @threeSum += 5
+        if Comment.multiplier == ""
+            Comment.multiplier = 1;
         else 
-            @threeSum += 0
+            Comment.multiplier = Comment.multiplier.to_i;
+        end
+        
+        @threeSum += post.mission.points * Comment.multiplier
+        if post.is_type_of_video? 
+            @threeSum += 10 * Comment.multiplier
+        elsif post.is_type_of_image?
+            @threeSum += 5 * Comment.multiplier
+        else 
+            @threeSum += 0 * Comment.multiplier
         end
     end
 
@@ -79,35 +96,53 @@ class StaticPagesController < ApplicationController
       @threeSum = 0;
 
    	one.each do |post|
+        if Comment.multiplier == ""
+            Comment.multiplier = 1;
+        else 
+            Comment.multiplier = Comment.multiplier.to_i;
+        end
+        
    		@oneSum += post.mission.points 
         if post.is_type_of_video? 
-            @oneSum += 10
+            @oneSum += 10 * Comment.multiplier
         elsif post.is_type_of_image?
-            @oneSum += 5
+            @oneSum += 5 * Comment.multiplier
         else 
-            @oneSum += 0
+            @oneSum += 0 * Comment.multiplier
         end
    	end
 
     two.each do |post|
+        if Comment.multiplier == ""
+            Comment.multiplier = 1;
+        else 
+            Comment.multiplier = Comment.multiplier.to_i;
+        end
+        
         @twoSum += post.mission.points
         if post.is_type_of_video? 
-            @twoSum += 10
+            @twoSum += 10 * Comment.multiplier
         elsif post.is_type_of_image?
-            @twoSum += 5
+            @twoSum += 5 * Comment.multiplier
         else 
-            @twoSum += 0
+            @twoSum += 0 * Comment.multiplier
         end
     end
 
     three.each do |post|
-        @threeSum += post.mission.points
-        if post.is_type_of_video? 
-            @threeSum += 10
-        elsif post.is_type_of_image?
-            @threeSum += 5
+        if Comment.multiplier == ""
+            Comment.multiplier = 1;
         else 
-            @threeSum += 0
+            Comment.multiplier = Comment.multiplier.to_i;
+        end
+        
+        @threeSum += post.mission.points * Comment.multiplier
+        if post.is_type_of_video? 
+            @threeSum += 10 * Comment.multiplier
+        elsif post.is_type_of_image?
+            @threeSum += 5 * Comment.multiplier
+        else 
+            @threeSum += 0 * Comment.multiplier
         end
     end
        
