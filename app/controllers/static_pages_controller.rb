@@ -138,7 +138,7 @@ class StaticPagesController < ApplicationController
             1
         end
         
-        @threeSum += post.mission.points * post.multiplier
+        @threeSum += post.mission.points * @multiply
         if post.is_type_of_video? 
             @threeSum += 10 * @multiply
         elsif post.is_type_of_image?
