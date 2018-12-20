@@ -7,21 +7,23 @@ class StaticPagesController < ApplicationController
    	@oneSum = 0;
    	@twoSum = 0;
 	@threeSum = 0;
+    
+    @multiply = 0;
            
    	one.each do |post|
-        post.multiplier = begin
+        @multiply = begin
             Integer(post.multiplier)
         rescue
             1
         end
         
-   		@oneSum += post.mission.points * post.multiplier
+   		@oneSum += post.mission.points * @multiply
         if post.is_type_of_video? 
-            @oneSum += 10 * post.multiplier
+            @oneSum += 10 * @multiply
         elsif post.is_type_of_image?
-            @oneSum += 5 * post.multiplier
+            @oneSum += 5 * @multiple
         else 
-            @oneSum += 0 * post.multiplier
+            @oneSum += 0 * @multiply
         end
    	end
 
