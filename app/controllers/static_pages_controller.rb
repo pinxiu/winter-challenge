@@ -104,7 +104,7 @@ class StaticPagesController < ApplicationController
             1
         end
         
-   		@oneSum += post.mission.points 
+   		@oneSum += post.mission.points  * @multiply
         if post.is_type_of_video? 
             @oneSum += 10 * @multiply
         elsif post.is_type_of_image?
@@ -121,7 +121,7 @@ class StaticPagesController < ApplicationController
             1
         end
         
-        @twoSum += post.mission.points
+        @twoSum += post.mission.points  * @multiply
         if post.is_type_of_video? 
             @twoSum += 10 * @multiply
         elsif post.is_type_of_image?
