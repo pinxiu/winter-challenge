@@ -8,18 +8,14 @@
                 
 <svg class="chart" width="1200" height="500" aria-labelledby="title desc" role="img">
   <title id="title">Winning Team</title>
-  <desc id="desc">A2F, Klesis, MakeNew</desc>
+  <desc id="desc">Brothers, Sisters</desc>
   <g class="bar">
     <rect width="<%= @oneStat %>" height="99"></rect>
-    <text x="<%= @barOne %>" y="49.5" dy=".35em">A2F - <%= @oneSum %></text>
+    <text x="<%= @barOne %>" y="49.5" dy=".35em">Brothers - <%= @oneSum %></text>
   </g>
   <g class="bar-winner">
     <rect width="<%= @twoStat %>" height="99" y="100"></rect>
-    <text x="<%= @barTwo %>" y="149" dy=".35em">Klesis - <%= @twoSum %></text>
-  </g>
-  <g class="bar">
-    <rect width="<%= @threeStat %>" height="99" y="200"></rect>
-    <text x="<%= @barThree %>" y="249" dy=".35em">MakeNew - <%= @threeSum %></text>
+    <text x="<%= @barTwo %>" y="149" dy=".35em">Sisters - <%= @twoSum %></text>
   </g>
 </svg>
             </div>
