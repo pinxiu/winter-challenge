@@ -5,7 +5,6 @@ class StaticPagesController < ApplicationController
       two = Comment.where(:team => "Sisters").all
    	@oneSum = 0;
    	@twoSum = 0;
-	@threeSum = 0;
     
     @multiply = 0;
            
@@ -43,25 +42,7 @@ class StaticPagesController < ApplicationController
         end
     end
 
-    three.each do |post|
-        @multiply = begin
-            Integer(post.multiplier)
-        rescue
-            1
-        end
-        
-        @threeSum += post.mission.points * @multiply
-        if post.is_type_of_video? 
-            @threeSum += 10 * @multiply
-        elsif post.is_type_of_image?
-            @threeSum += 5 * @multiply
-        else 
-            @threeSum += 0 * @multiply
-        end
-    end
-
-
-      @points = [['A2F', @oneSum], ['Klesis', @twoSum], ['MakeNew', @threeSum]].sort do |a, b|
+      @points = [['Brothers', @oneSum], ['Sisters', @twoSum]].sort do |a, b|
          b[1] <=> a[1]
       end
 
@@ -85,16 +66,12 @@ class StaticPagesController < ApplicationController
    def stats
       #@one = ['Kevan', 'Jon Kim', 'Will', 'Alex', 'Josh Joo', 'Kevin Stock', 'Daniel Liu', 'Godwin Law', 'Jonathan Chen']
       #@two = ['Jenny', 'Kat Kim', 'Alex', 'Adeline', 'Huizhen', 'Dasol', 'Vivian L', 'Jennifer Li', 'Stella Oh', 'Michelle Kim', 'Vanessa', 'Mira Chiu', 'Katherine Cai']
-      #@three = ['Joe', 'Brian Jue', 'Ivan Yung', 'Jeff W', 'Nathan M', 'Andrew N.', 'Josh Kim', 'David Lee', 'Daniel Shan', 'Matt Estrada', 'Ben VDH', 'Noah Kang']
-      #@four = ['Irene', 'Ellen Jue', 'San Yung', 'Joyce Cho', 'Joyce Han', 'Nancy P.', 'Claire Lee', 'Kristy J', 'Grace Park', 'Yvonne W', 'Micaela W']
-
+      
       @totalCount = Comment.count
       one = Comment.where(:team => "A2F").all
       two = Comment.where(:team => "Klesis").all
-      three = Comment.where(:team => "MakeNew").all
       @oneSum = 0;
       @twoSum = 0;
-      @threeSum = 0;
 
    	one.each do |post|
         @multiply = begin
@@ -129,26 +106,9 @@ class StaticPagesController < ApplicationController
             @twoSum += 0 * @multiply
         end
     end
-
-    three.each do |post|
-        @multiply = begin
-            Integer(post.multiplier)
-        rescue
-            1
-        end
-        
-        @threeSum += post.mission.points * @multiply
-        if post.is_type_of_video? 
-            @threeSum += 10 * @multiply
-        elsif post.is_type_of_image?
-            @threeSum += 5 * @multiply
-        else 
-            @threeSum += 0 * @multiply
-        end
-    end
        
 
-      @points = [['A2F', @oneSum], ['Klesis', @twoSum], ['MakeNew', @threeSum]].sort do |a, b|
+      @points = [['A2F', @oneSum], ['Klesis', @twoSum]].sort do |a, b|
          b[1] <=> a[1]
       end
 
@@ -158,11 +118,9 @@ class StaticPagesController < ApplicationController
        
        @oneStat = @oneSum / 20
        @twoStat = @twoSum / 20
-       @threeStat = @threeSum / 20
        
        @barOne = @oneStat + 5
        @barTwo = @twoStat + 5
-       @barThree = @threeStat + 5
        
    end
 
