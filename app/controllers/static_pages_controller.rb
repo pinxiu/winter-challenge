@@ -68,8 +68,8 @@ class StaticPagesController < ApplicationController
       #@two = ['Jenny', 'Kat Kim', 'Alex', 'Adeline', 'Huizhen', 'Dasol', 'Vivian L', 'Jennifer Li', 'Stella Oh', 'Michelle Kim', 'Vanessa', 'Mira Chiu', 'Katherine Cai']
       
       @totalCount = Comment.count
-      one = Comment.where(:team => "A2F").all
-      two = Comment.where(:team => "Klesis").all
+      one = Comment.where(:team => "Brothers").all
+      two = Comment.where(:team => "Sisters").all
       @oneSum = 0;
       @twoSum = 0;
 
@@ -108,7 +108,7 @@ class StaticPagesController < ApplicationController
     end
        
 
-      @points = [['A2F', @oneSum], ['Klesis', @twoSum]].sort do |a, b|
+      @points = [['Brothers', @oneSum], ['Sisters', @twoSum]].sort do |a, b|
          b[1] <=> a[1]
       end
 
