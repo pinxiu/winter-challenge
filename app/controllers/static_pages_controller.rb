@@ -1,9 +1,8 @@
 class StaticPagesController < ApplicationController
    def home
       @totalCount = Comment.count
-      one = Comment.where(:team => "A2F").all
-      two = Comment.where(:team => "Klesis").all
-      three = Comment.where(:team => "MakeNew").all
+      one = Comment.where(:team => "Brothers").all
+      two = Comment.where(:team => "Sisters").all
    	@oneSum = 0;
    	@twoSum = 0;
 	@threeSum = 0;
