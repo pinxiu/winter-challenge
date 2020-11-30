@@ -63,24 +63,8 @@ class Comment < ApplicationRecord
     end
 
     def force_names
-        if self.name == "Kenny Kao"
-            self.name = "Kenneth Kao"
-        end
-
-        if self.name == "Vina Nguyen-Ha"
-            self.name = "Vina Nguyen Ha"
-        end
-
-        if self.name == "Diana Alcala-Davalos"
-            self.name = "Diana Alcala Davalos"
-        end
-
-        if self.name == "Vanessa Zembrano"
-            self.name = "Vanessa Zambrano"
-        end
-
-        if self.name == "Vanessa Zambranos"
-            self.name = "Vanessa Zambrano"
+        if self.name == "Yiping Wang"
+            self.name = "Ella Wang"
         end
     end
 
