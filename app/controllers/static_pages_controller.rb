@@ -49,7 +49,7 @@ class StaticPagesController < ApplicationController
       @winner = @points.delete_at(0)
 
    	@comment = Comment.new
-
+      # TODO Edit these to the IGSM categories
       @sg = Mission.where(:category_id => Category.where(:mission_type => "Spiritual Growth").first.id)
       @evangelism = Mission.where(:category_id => Category.where(:mission_type => "Evangelism").first.id)
       @ser = Mission.where(:category_id => Category.where(:mission_type => "Service/Gratitude").first.id)
