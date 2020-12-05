@@ -57,6 +57,7 @@ class StaticPagesController < ApplicationController
    end
 
    def challenges
+    # TODO Edit these to the IGSM categories
    	@sg = Mission.where(:category_id => Category.where(:mission_type => "Spiritual Growth").first.id)
    	@evangelism = Mission.where(:category_id => Category.where(:mission_type => "Evangelism").first.id)
    	@service = Mission.where(:category_id => Category.where(:mission_type => "Service/Gratitude").first.id)
