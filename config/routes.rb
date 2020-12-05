@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'challenges', to: 'static_pages#challenges'
   get 'completed', to: 'static_pages#completed'
   get 'stats', to: 'static_pages#stats'
+  get 'missions', to: 'missions#index'
   resources :comments, only: [:create]
   resources :comment
   resources :sg
