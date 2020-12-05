@@ -2,13 +2,13 @@ class MissionsController < ApplicationController
   before_action :set_mission, only: [:show, :edit, :update, :destroy]
 
   GET /missions
-  # GET /missions.json
+  GET /missions.json
   def index
     @missions = Mission.all
   end
 
   GET /missions/1
-  # GET /missions/1.json
+  GET /missions/1.json
   def show
   end
 
@@ -22,7 +22,7 @@ class MissionsController < ApplicationController
   end
 
   POST /missions
-  # POST /missions.json
+  POST /missions.json
   def create
     @mission = Mission.new(mission_params)
 
@@ -38,7 +38,7 @@ class MissionsController < ApplicationController
   end
 
   PATCH/PUT /missions/1
-  # PATCH/PUT /missions/1.json
+  PATCH/PUT /missions/1.json
   def update
     respond_to do |format|
       if @mission.update(mission_params)
@@ -52,7 +52,7 @@ class MissionsController < ApplicationController
   end
 
   DELETE /missions/1
-  # DELETE /missions/1.json
+  DELETE /missions/1.json
   def destroy
     @mission.destroy
     respond_to do |format|
