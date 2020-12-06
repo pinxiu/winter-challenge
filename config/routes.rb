@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'challenges', to: 'static_pages#challenges'
   get 'completed', to: 'static_pages#completed'
   get 'stats', to: 'static_pages#stats'
-  resources :missions
+  # resources :missions
   resources :comments, only: [:create]
   resources :comment
   resources :sg
