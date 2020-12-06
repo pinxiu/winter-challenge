@@ -1,10 +1,20 @@
 class StaticPagesController < ApplicationController
    def home
       @totalCount = Comment.count
-      one = Comment.where(:team => "Brothers").all
-      two = Comment.where(:team => "Sisters").all
+      one = Comment.where(:team => "Team Jeff").all
+      two = Comment.where(:team => "Team Jisup").all
+      three = Comment.where(:team => "Team Gary").all
+      four = Comment.where(:team => "Team Adam").all
+      five = Comment.where(:team => "Team Sara").all
+      six = Comment.where(:team => "Team Ella").all
+      seven = Comment.where(:team => "Team Lynn").all
    	@oneSum = 0;
    	@twoSum = 0;
+    @threeSum = 0;
+    @fourSum = 0;
+    @fiveSum = 0;
+    @sixSum = 0;
+    @sevenSum = 0;
     
     @multiply = 0;
            
@@ -39,6 +49,91 @@ class StaticPagesController < ApplicationController
             @twoSum += 5 * @multiply
         else 
             @twoSum += 0 * @multiply
+        end
+    end
+
+    three.each do |post|
+        @multiply = begin
+            Integer(post.multiplier)
+        rescue
+            1
+        end
+        
+      @threeSum += post.mission.points * @multiply
+        if post.is_type_of_video? 
+            @threeSum += 10 * @multiply
+        elsif post.is_type_of_image?
+            @threeSum += 5 * @multiply
+        else 
+            @threeSum += 0 * @multiply
+        end
+    end
+
+    four.each do |post|
+        @multiply = begin
+            Integer(post.multiplier)
+        rescue
+            1
+        end
+        
+        @fourSum += post.mission.points * @multiply
+        if post.is_type_of_video? 
+            @fourSum += 10 * @multiply
+        elsif post.is_type_of_image?
+            @fourSum += 5 * @multiply
+        else 
+            @fourSum += 0 * @multiply
+        end
+    end
+
+    five.each do |post|
+        @multiply = begin
+            Integer(post.multiplier)
+        rescue
+            1
+        end
+        
+      @fiveSum += post.mission.points * @multiply
+        if post.is_type_of_video? 
+            @fiveSum += 10 * @multiply
+        elsif post.is_type_of_image?
+            @fiveSum += 5 * @multiply
+        else 
+            @fiveSum += 0 * @multiply
+        end
+    end
+
+    six.each do |post|
+        @multiply = begin
+            Integer(post.multiplier)
+        rescue
+            1
+        end
+        
+        @sixSum += post.mission.points * @multiply
+        if post.is_type_of_video? 
+            @sixSum += 10 * @multiply
+        elsif post.is_type_of_image?
+            @sixSum += 5 * @multiply
+        else 
+            @sixSum += 0 * @multiply
+        end
+    end
+
+    seven.each do |post|
+        @multiply = begin
+            Integer(post.multiplier)
+        rescue
+            1
+        end
+        
+      @sevenSum += post.mission.points * @multiply
+        if post.is_type_of_video? 
+            @sevenSum += 10 * @multiply
+        elsif post.is_type_of_image?
+            @sevenSum += 5 * @multiply
+        else 
+            @sevenSum += 0 * @multiply
         end
     end
 
