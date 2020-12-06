@@ -27,9 +27,9 @@ class StaticPagesController < ApplicationController
         
    		@oneSum += post.mission.points * @multiply
         if post.is_type_of_video? 
-            @oneSum += 10 * @multiply
+            @oneSum += 3 * @multiply
         elsif post.is_type_of_image?
-            @oneSum += 5 * @multiply
+            @oneSum += 2 * @multiply
         else 
             @oneSum += 0 * @multiply
         end
@@ -44,9 +44,9 @@ class StaticPagesController < ApplicationController
         
         @twoSum += post.mission.points * @multiply
         if post.is_type_of_video? 
-            @twoSum += 10 * @multiply
+            @twoSum += 3 * @multiply
         elsif post.is_type_of_image?
-            @twoSum += 5 * @multiply
+            @twoSum += 2 * @multiply
         else 
             @twoSum += 0 * @multiply
         end
@@ -61,9 +61,9 @@ class StaticPagesController < ApplicationController
         
       @threeSum += post.mission.points * @multiply
         if post.is_type_of_video? 
-            @threeSum += 10 * @multiply
+            @threeSum += 3 * @multiply
         elsif post.is_type_of_image?
-            @threeSum += 5 * @multiply
+            @threeSum += 2 * @multiply
         else 
             @threeSum += 0 * @multiply
         end
@@ -78,9 +78,9 @@ class StaticPagesController < ApplicationController
         
         @fourSum += post.mission.points * @multiply
         if post.is_type_of_video? 
-            @fourSum += 10 * @multiply
+            @fourSum += 3 * @multiply
         elsif post.is_type_of_image?
-            @fourSum += 5 * @multiply
+            @fourSum += 2 * @multiply
         else 
             @fourSum += 0 * @multiply
         end
@@ -95,9 +95,9 @@ class StaticPagesController < ApplicationController
         
       @fiveSum += post.mission.points * @multiply
         if post.is_type_of_video? 
-            @fiveSum += 10 * @multiply
+            @fiveSum += 3 * @multiply
         elsif post.is_type_of_image?
-            @fiveSum += 5 * @multiply
+            @fiveSum += 2 * @multiply
         else 
             @fiveSum += 0 * @multiply
         end
@@ -112,9 +112,9 @@ class StaticPagesController < ApplicationController
         
         @sixSum += post.mission.points * @multiply
         if post.is_type_of_video? 
-            @sixSum += 10 * @multiply
+            @sixSum += 3 * @multiply
         elsif post.is_type_of_image?
-            @sixSum += 5 * @multiply
+            @sixSum += 2 * @multiply
         else 
             @sixSum += 0 * @multiply
         end
@@ -129,9 +129,9 @@ class StaticPagesController < ApplicationController
         
       @sevenSum += post.mission.points * @multiply
         if post.is_type_of_video? 
-            @sevenSum += 10 * @multiply
+            @sevenSum += 3 * @multiply
         elsif post.is_type_of_image?
-            @sevenSum += 5 * @multiply
+            @sevenSum += 2 * @multiply
         else 
             @sevenSum += 0 * @multiply
         end
@@ -197,9 +197,9 @@ class StaticPagesController < ApplicationController
         
    		@oneSum += post.mission.points  * @multiply
         if post.is_type_of_video? 
-            @oneSum += 10 * @multiply
+            @oneSum += 3 * @multiply
         elsif post.is_type_of_image?
-            @oneSum += 5 * @multiply
+            @oneSum += 2 * @multiply
         else 
             @oneSum += 0 * @multiply
         end
@@ -214,9 +214,9 @@ class StaticPagesController < ApplicationController
         
         @twoSum += post.mission.points  * @multiply
         if post.is_type_of_video? 
-            @twoSum += 10 * @multiply
+            @twoSum += 3 * @multiply
         elsif post.is_type_of_image?
-            @twoSum += 5 * @multiply
+            @twoSum += 2 * @multiply
         else 
             @twoSum += 0 * @multiply
         end
@@ -231,9 +231,9 @@ class StaticPagesController < ApplicationController
         
       @threeSum += post.mission.points  * @multiply
         if post.is_type_of_video? 
-            @threeSum += 10 * @multiply
+            @threeSum += 3 * @multiply
         elsif post.is_type_of_image?
-            @threeSum += 5 * @multiply
+            @threeSum += 2 * @multiply
         else 
             @threeSum += 0 * @multiply
         end
@@ -248,9 +248,9 @@ class StaticPagesController < ApplicationController
         
         @fourSum += post.mission.points  * @multiply
         if post.is_type_of_video? 
-            @fourSum += 10 * @multiply
+            @fourSum += 3 * @multiply
         elsif post.is_type_of_image?
-            @fourSum += 5 * @multiply
+            @fourSum += 2 * @multiply
         else 
             @fourSum += 0 * @multiply
         end
@@ -265,9 +265,9 @@ class StaticPagesController < ApplicationController
         
       @fiveSum += post.mission.points  * @multiply
         if post.is_type_of_video? 
-            @fiveSum += 10 * @multiply
+            @fiveSum += 3 * @multiply
         elsif post.is_type_of_image?
-            @fiveSum += 5 * @multiply
+            @fiveSum += 2 * @multiply
         else 
             @fiveSum += 0 * @multiply
         end
@@ -282,9 +282,9 @@ class StaticPagesController < ApplicationController
         
         @sixSum += post.mission.points  * @multiply
         if post.is_type_of_video? 
-            @sixSum += 10 * @multiply
+            @sixSum += 3 * @multiply
         elsif post.is_type_of_image?
-            @sixSum += 5 * @multiply
+            @sixSum += 2 * @multiply
         else 
             @sixSum += 0 * @multiply
         end
@@ -299,9 +299,9 @@ class StaticPagesController < ApplicationController
         
       @sevenSum += post.mission.points  * @multiply
         if post.is_type_of_video? 
-            @sevenSum += 10 * @multiply
+            @sevenSum += 3 * @multiply
         elsif post.is_type_of_image?
-            @sevenSum += 5 * @multiply
+            @sevenSum += 2 * @multiply
         else 
             @sevenSum += 0 * @multiply
         end
