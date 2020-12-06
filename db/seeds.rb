@@ -9,46 +9,41 @@
 Category.delete_all
 Mission.delete_all
 
-sg = Category.create!(mission_type: 'Spiritual Growth')
-ev = Category.create!(mission_type: 'Evangelism')
-ser = Category.create!(mission_type: 'Service/Gratitude')
-equ = Category.create!(mission_type: 'Equipping')
+dbr = Category.create!(mission_type: 'Bible reading')
+dwp = Category.create!(mission_type: 'Prayer')
+poc = Category.create!(mission_type: 'Reaching out')
+lss = Category.create!(mission_type: 'Skills for serving')
+fif = Category.create!(mission_type: '“Fasting” / Focus')
+exe = Category.create!(mission_type: 'Exercise')
+pmt = Category.create!(mission_type: 'Message / Talk')
 
-# service/gratitude
-Mission.create!(name: 'Do chores (laundry, dishes, take out the trash) at home (max: 40)', points: 10, category: ser)
-Mission.create!(name: 'Write a "Thank you" note to someone who is not your peer', points: 20, category: ser)
-Mission.create!(name: 'Learn a new dish', points: 20, category: ser)
-Mission.create!(name: '10 Days of Gratitude Journal (10 entries/day)', points: 50, category: ser)
-Mission.create!(name: 'Host Dinner for Your Family and/or Friends', points: 60, category: ser)
-
-
-# evangelism
-Mission.create!(name: 'Share the Gospel and/or your testimony with a non-Christian friend or family member', points: 40, category: ev)
-Mission.create!(name: 'Bring a non-Christian friend or family member to church!', points: 50, category: ev)
-Mission.create!(name: 'Prepare a special talk or presentation on a Christian topic (can do this with your friends)', points: 50, category: ev)
-Mission.create!(name: 'Read a Christian book with a non Christian friend or family member', points: 60, category: ev)
-Mission.create!(name: 'Give a special talk or presentation on a Christian topic (can do this with your friends)', points: 100, category: ev)
-Mission.create!(name: 'Lead a bible study with a non-Christian friend or family member', points: 100, category: ev)
+# Daily Bible reading
+Mission.create!(name: 'Daily Points: Read the day’s passage from igsm.link/bible-reading-plan (usually 3-5 chapters) and remember a key verse', points: 10, category: dbr)
+Mission.create!(name: 'One time points: If you complete all the reading for the 40 days', points: 40, category: dbr)
 
 
-# spiritual growth
-Mission.create!(name: 'Read Bible (20 Chapters)', points: 20, category: sg)
-Mission.create!(name: 'Memorize a Psalm', points: 25, category: sg)
-Mission.create!(name: 'Video Chat with a peer of your LG: Share prayer requests or DT', points: 50, category: sg)
-Mission.create!(name: '10 consecutive days of DT', points: 50, category: sg)
-Mission.create!(name: 'Outline all 4 Gospels', points: 50, category: sg)
-Mission.create!(name: 'Read a Christian book: Write a blurb about it!', points: 50, category: sg)
-Mission.create!(name: '10 Min Prayer Daily for a week', points: 50, category: sg)
+# Daily and weekly prayer
+Mission.create!(name: 'Daily Points: 15 minutes of prayer using a prayer guide or by joining the guided prayer time', points: 10, category: dwp)
+Mission.create!(name: 'Weekly Points: 30 minute prayer time with prayer partner', points: 20, category: dwp)
+Mission.create!(name: 'One time points: 30 minute campus prayer walk. Can be any college or university campus.', points: 40, category: dwp)
 
 
-
-# physical equipping
-Mission.create!(name: '35 push-ups / day', points: 5, category: equ)
-Mission.create!(name: 'GO running! (10 pts / 1 mile)', points: 10, category: equ)
-Mission.create!(name: 'Join 7 minute workout app, add your LG and do a workout together (in person or via video chat)', points: 25, category: equ)
-Mission.create!(name: '5 Day Social/Video Media Fast ', points: 50, category: equ)
-Mission.create!(name: '1,000 Pushups (Honor System)', points: 70, category: equ)
+# Plan and put on an outreach activity
+Mission.create!(name: 'One time points: With your team, plan out one outreach activity (to meet new students)', points: 100, category: poc)
+Mission.create!(name: 'One time points: With your team, do the outreach activity you planned', points: 100, category: poc)
 
 
+# Learn skills for serving
+Mission.create!(name: 'One time points: Complete an online course that we offer on skills', points: 50, category: lss)
 
 
+# “Fasting” to increase focus
+Mission.create!(name: 'Daily Points: Cut out one habitual activity that will help you to be more spiritually alert.', points: 10, category: fif)
+
+# Exercise
+Mission.create!(name: 'Daily Points: 15 minutes of exercise (if you didn’t sweat, then it’s not exercise)', points: 10, category: exe)
+
+# Prepare a message / special talk
+Mission.create!(name: 'One time points: Prepare and give a presentation - First complete draft of talk / slides', points: 100, category: pmt)
+Mission.create!(name: 'One time points: Prepare and give a presentation - Dry runs and completion of final draft  / slides', points: 100, category: pmt)
+Mission.create!(name: 'One time points: Prepare and give a presentation - Video recording of presentation', points: 100, category: pmt)
