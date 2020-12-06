@@ -43,10 +43,14 @@ class Comment < ApplicationRecord
         provider: 'AWS',
         aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"],
 <<<<<<< HEAD
+<<<<<<< HEAD
         aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],
         region: ENV["AWS_REGION"],
 =======
         aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"]
+=======
+        aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],
+>>>>>>> c9d01c77a50e85816554b8792f14e0100a0c525d
         region: ENV["AWS_REGION"]
 >>>>>>> 022928f175e6babccb6b35cfb650be473e4f6676
     },
