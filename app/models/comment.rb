@@ -13,7 +13,7 @@ class Comment < ApplicationRecord
 
 	has_attached_file :avatar, styles: { medium: "900x506>", thumb: "100x100>" },
 	:url  => ":s3_domain_url",
-    :s3_region => "us-west-1",
+    :s3_region => ENV["AWS_REGION"],
     :s3_host_name => ENV["S3_HOST_NAME"],
     :path => "public/avatars/:id/:style_:basename.:extension",
     :storage => :fog,
@@ -21,7 +21,7 @@ class Comment < ApplicationRecord
         provider: 'AWS',
         aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"],
         aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],
-        region: 'us-west-1'
+        region: ENV["AWS_REGION"],
     },
     fog_directory: ENV["FOG_DIRECTORY"]
 
@@ -35,7 +35,7 @@ class Comment < ApplicationRecord
     },
     :processors => [:transcoder],
     :url  => ":s3_domain_url",
-    :s3_region => "us-west-1",
+    :s3_region => ENV["AWS_REGION"],
     :s3_host_name => ENV["S3_HOST_NAME"],
     :path => "public/videos/:id/:style_:basename.:extension",
     :storage => :fog,
@@ -43,6 +43,7 @@ class Comment < ApplicationRecord
         provider: 'AWS',
         aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"],
         aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"]
+        region: ENV["AWS_REGION"],
     },
     fog_directory: ENV["FOG_DIRECTORY"]
 
