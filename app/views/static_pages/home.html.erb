@@ -67,6 +67,7 @@
 
                     <div class="col-lg-6">
                         <%= render 'shared/error_messages' %>
+                        <div class="form-group">
                         <%= f.label :name, "Name" %>
 
                             <select class="form-control" name="comment[name]" id="comment_name">
@@ -110,18 +111,6 @@
                         </div>
 
                         <div class="form-group">
-                            <%= f.label :content, "Dates completed and description!" %>
-                            <%= f.text_area :content, { :class => "form-control", rows: "5"} %>
-                        </div>
-                        <div class="form-group">
-                            <%= f.label :multiplier, "Number of people or sets completed (aka, 4 people in video chat or 4 miles so you only have to log once). This will automatically add in points for each person instead of posting the same thing multiple times." %>
-                            <%= f.text_field :multiplier, { :class => "form-control"} %>
-                        </div>
-                    </div>
-                
-
-                    <div class="col-lg-6">
-                        <div class="form-group">
                             <%= f.label :mission_id, "Challenge" %>
 
                             <select class="form-control" name="comment[mission_id]" id="comment_mission_id">
@@ -162,6 +151,20 @@
                                     <% end %>
                                 </optgroup>
                             </select>
+                        </div>
+
+                        <div class="form-group">
+                            <%= f.label :content, "Dates completed and description!" %>
+                            <%= f.text_area :content, { :class => "form-control", rows: "5"} %>
+                        </div>
+                        
+                    </div>
+                
+
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <%= f.label :multiplier, "Number of people or sets or days completed (aka, 4 people in video chat or 4 days so you only have to log once). This will automatically add in points for each person instead of posting the same thing multiple times." %>
+                            <%= f.text_field :multiplier, { :class => "form-control"} %>
                         </div>
 
                         <div class="form-group">
