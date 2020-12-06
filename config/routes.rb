@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Lockup::Engine, at: '/lockup'
   root "static_pages#home"
   get 'challenges', to: 'static_pages#challenges'
   get 'completed', to: 'static_pages#completed'

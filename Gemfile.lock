@@ -96,7 +96,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     dry-inflector (0.2.0)
     erubis (2.7.0)
-    excon (0.78.0)
+    excon (0.78.1)
     execjs (2.7.0)
     ffi (1.13.1)
     figaro (1.2.0)
@@ -271,6 +271,8 @@ GEM
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    lockup (1.5.1)
+      rails (>= 3, < 6.1)
     loofah (2.8.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -410,6 +412,7 @@ DEPENDENCIES
   json!
   lato-rails
   listen (~> 3.0.5)
+  lockup
   paperclip (~> 5.0.0)
   paperclip-av-transcoder
   paperclip-ffmpeg (~> 1.2.0)
