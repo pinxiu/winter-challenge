@@ -316,13 +316,13 @@ class StaticPagesController < ApplicationController
 
       @winner = @points.delete_at(0)
        
-       @oneStat = @oneSum / 20
-       @twoStat = @twoSum / 20
-       @threeStat = @threeSum / 20
-       @fourStat = @fourSum / 20
-       @fiveStat = @fiveSum / 20
-       @sixStat = @sixSum / 20
-       @sevenStat = @sevenSum / 20
+       @oneStat = @oneSum / 10
+       @twoStat = @twoSum / 10
+       @threeStat = @threeSum / 10
+       @fourStat = @fourSum / 10
+       @fiveStat = @fiveSum / 10
+       @sixStat = @sixSum / 10
+       @sevenStat = @sevenSum / 10
        
        @barOne = @oneStat + 5
        @barTwo = @twoStat + 5
