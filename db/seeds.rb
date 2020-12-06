@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Category.delete_all
 Mission.delete_all
+Category.delete_all
 
 dbr = Category.create!(mission_type: 'Bible reading')
 dwp = Category.create!(mission_type: 'Prayer')
