@@ -95,16 +95,12 @@
                                 <option value>Select Challenge</option>
                                 <optgroup label="Bible reading">Bible reading
                                     <% @homedbr.each do |mission| %>
-                                        <% if !mission.name.include? "Daily" %>
-                                        <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
-                                        <% end %>
+                                    <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
                                     <% end %>
                                 </optgroup>
                                 <optgroup label="Prayer">Prayer
                                     <% @homedwp.each do |mission| %>
-                                        <% if !mission.name.include? "Daily" %>
-                                        <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
-                                        <% end %>
+                                    <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
                                     <% end %>
                                 </optgroup>
                                 <optgroup label="Reaching out">Reaching out
@@ -117,9 +113,6 @@
                                     <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
                                     <% end %>
                                 </optgroup>
-
-                                <%# Remove daily only categories %>
-                                <% if false %>
                                 <optgroup label="“Fasting” / Focus">“Fasting” / Focus
                                     <% @homefif.each do |mission| %>
                                     <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
@@ -130,8 +123,6 @@
                                     <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
                                     <% end %>
                                 </optgroup>
-                                <% end %>
-                                
                                 <optgroup label="Message / Talk">Message / Talk
                                     <% @homepmt.each do |mission| %>
                                     <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
@@ -139,16 +130,6 @@
                                 </optgroup>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <%= f.label :daily_info, "Dailies" %>
-                            <%= f.check_box :daily_bible %> <a href="https://igsm.link/bible-reading-plan">Read the day’s passage</a> and remember the key verse
-                            <%= f.check_box :daily_prayer %> 15 minutes of prayer using a prayer guide or by joining the guided prayer time
-                            <%= f.check_box :daily_fasting %> Cut out one habitual activity that will help you to be more spiritually alert.
-                            <%= f.check_box :daily_exercise %> 15 minutes of exercise (if you didn’t sweat, then it’s not exercise)
-                        </div>
-
-                        <% if false %>
-                        <% end %>
 
                         <div class="form-group">
                             <%= f.label :avatar, "Upload a Picture (+2 points)" %>
