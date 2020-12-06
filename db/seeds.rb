@@ -6,8 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Comment.delete_all
 Mission.delete_all
 Category.delete_all
+Player.delete_all
+Team.delete_all
 
 dbr = Category.create!(mission_type: 'Bible reading')
 dwp = Category.create!(mission_type: 'Prayer')
@@ -47,3 +50,41 @@ Mission.create!(name: 'Daily Points: 15 minutes of exercise (if you didn’t swe
 Mission.create!(name: 'One time points: Prepare and give a presentation - First complete draft of talk / slides', points: 100, category: pmt)
 Mission.create!(name: 'One time points: Prepare and give a presentation - Dry runs and completion of final draft  / slides', points: 100, category: pmt)
 Mission.create!(name: 'One time points: Prepare and give a presentation - Video recording of presentation', points: 100, category: pmt)
+
+# Create Teams
+team_jeff = Team.create!(name: 'Team Jeff')
+team_jisup = Team.create!(name: 'Team Jisup')
+team_gary = Team.create!(name: 'Team Gary')
+team_adam = Team.create!(name: 'Team Adam')
+team_sara = Team.create!(name: 'Team Sara')
+team_ella = Team.create!(name: 'Team Ella')
+team_lynn = Team.create!(name: 'Team Lynn')
+
+# Create Team Member
+
+jeff = Player.create!(name: 'Jeff Chiu', team: team_jeff)
+sophia = Player.create!(name: 'Sophia Huang', team: team_lynn)
+jisup = Player.create!(name: 'Jisup Hong', team: team_jisup)
+sara = Player.create!(name: 'Sara Hong', team: team_sara)
+lynn = Player.create!(name: 'Lynn Ma', team: team_lynn)
+gia = Player.create!(name: 'Gia Park', team: team_lynn)
+adam = Player.create!(name: 'Adam Kor', team: team_adam)
+jacklyn = Player.create!(name: 'Jacklyn Ang', team: team_lynn)
+ella = Player.create!(name: 'Ella Wang', team: team_ella)
+bryan = Player.create!(name: 'Bryan Zheng', team: team_gary)
+alan = Player.create!(name: 'Alan Kwok', team: team_adam)
+gary = Player.create!(name: 'Gary Zhao', team: team_gary)
+summer = Player.create!(name: 'Summer Zhao', team: team_sara)
+phoebe = Player.create!(name: 'Phoebe Gong', team: team_ella)
+jerry = Player.create!(name: 'Jerry Tai', team: team_jeff)
+jilan = Player.create!(name: 'Jilan Zheng', team: team_sara)
+rick = Player.create!(name: 'Rick Zhong', team: team_gary)
+kevin = Player.create!(name: 'Kevin Lee', team: team_adam)
+wenxia = Player.create!(name: 'Wenxia Lin', team: team_ella)
+grace = Player.create!(name: 'Grace Borja', team: team_sara)
+mark = Player.create!(name: 'Mark Borja', team: team_jisup)
+victor = Player.create!(name: 'Youchen (Victor) Zhang', team: team_jeff)
+alvin = Player.create!(name: 'Alvin Tan', team: team_adam)
+sean = Player.create!(name: 'Sean Zhang', team: team_gary)
+yichuan = Player.create!(name: 'Yichuan Lu', team: team_jeff)
+jenny = Player.create!(name: 'Jenny Huang', team: team_ella)

@@ -7,10 +7,9 @@ Rails.application.routes.draw do
   # resources :missions
   resources :comments, only: [:create]
   resources :comment
-  resources :sg
-  resources :evangelism
-  resources :ser
-  resources :eq
+  resources :teams do
+    resources :players
+  end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

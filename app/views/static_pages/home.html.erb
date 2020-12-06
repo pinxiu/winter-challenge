@@ -67,15 +67,48 @@
 
                     <div class="col-lg-6">
                         <%= render 'shared/error_messages' %>
-                        <div class="form-group">
-                            <%= f.label :name, "Name (first and last)" %>
-                            <%= f.text_field :name, { :class => "form-control"} %>
+                        <%= f.label :name, "Name" %>
+
+                            <select class="form-control" name="comment[name]" id="comment_name">
+                                <option value>Select Name</option>
+                                <optgroup label="Team Jeff">Team Jeff
+                                    <% @jeff.each do |player| %>
+                                    <option value="<%= player.name %>"><%= player.name %></option>
+                                    <% end %>
+                                </optgroup>
+                                <optgroup label="Team Jisup">Team Jisup
+                                    <% @jisup.each do |player| %>
+                                    <option value="<%= player.name %>"><%= player.name %></option>
+                                    <% end %>
+                                </optgroup>
+                                <optgroup label="Team Gary">Team Gary
+                                    <% @gary.each do |player| %>
+                                    <option value="<%= player.name %>"><%= player.name %></option>
+                                    <% end %>
+                                </optgroup>
+                                <optgroup label="Team Adam">Team Adam
+                                    <% @adam.each do |player| %>
+                                    <option value="<%= player.name %>"><%= player.name %></option>
+                                    <% end %>
+                                </optgroup>
+                                <optgroup label="Team Sara">Team Sara
+                                    <% @sara.each do |player| %>
+                                    <option value="<%= player.name %>"><%= player.name %></option>
+                                    <% end %>
+                                </optgroup>
+                                <optgroup label="Team Ella">Team Ella
+                                    <% @ella.each do |player| %>
+                                    <option value="<%= player.name %>"><%= player.name %></option>
+                                    <% end %>
+                                </optgroup>
+                                <optgroup label="Team Lynn">Team Lynn
+                                    <% @lynn.each do |player| %>
+                                    <option value="<%= player.name %>"><%= player.name %></option>
+                                    <% end %>
+                                </optgroup>
+                            </select>
                         </div>
 
-                        <div class="form-group">
-                            <%= f.label :team %>
-                            <%= f.select :team, options_for_select(["Team Jeff","Team Jisup","Team Gary","Team Adam","Team Sara","Team Ella","Team Lynn"]), {:prompt => 'Select Team'}, { :class => "form-control" } %>
-                        </div>
                         <div class="form-group">
                             <%= f.label :content, "Dates completed and description!" %>
                             <%= f.text_area :content, { :class => "form-control", rows: "5"} %>

@@ -70,28 +70,4 @@ class Comment < ApplicationRecord
         end
     end
 
-    TEAMS = {
-        "Adam Kor" => "Team Adam",
-        "Alan Kwok" => "Team Adam",
-        "Alvin Tan" => "Team Adam",
-        "Bryan Zheng" => "Team Adam",
-        "Ella Wang" => "Team Adam",
-        "Gary Zhao" => "Team Adam",
-        "Gia Park" => "Team Adam",
-        "Lynn Ma" => "Team Adam",
-        "Jacklyn" => "Team Adam",
-        "Jisup Hong" => "Team Adam",
-        "Sara Hong" => "Team Adam",
-        "Sophia " => "Team Adam",
-        "Adam Kor" => "Team Adam",
-        "Adam Kor" => "Team Adam",
-        "Adam Kor" => "Team Adam",
-        "Adam Kor" => "Team Adam",
-        "Adam Kor" => "Team Adam",
-        "Wenxia Lin" => "Team Adam",
-    }
-    # def team_from_name
-        
-    # end
-
 end

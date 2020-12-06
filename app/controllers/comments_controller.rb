@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   def create
     comment = Comment.new(comment_params)
+    comment.team = Player.where(:name => comment.name).first.team.name
     if comment.save
       flash[:success] = "Comment posted! Your progress has been logged."
       redirect_to root_url

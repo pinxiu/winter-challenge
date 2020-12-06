@@ -143,6 +143,14 @@ class StaticPagesController < ApplicationController
 
       @winner = @points.delete_at(0)
 
+      @jeff = Player.where(:team_id => Team.where(:name => "Team Jeff").first.id)
+      @jisup = Player.where(:team_id => Team.where(:name => "Team Jisup").first.id)
+      @gary = Player.where(:team_id => Team.where(:name => "Team Gary").first.id)
+      @adam = Player.where(:team_id => Team.where(:name => "Team Adam").first.id)
+      @sara = Player.where(:team_id => Team.where(:name => "Team Sara").first.id)
+      @ella = Player.where(:team_id => Team.where(:name => "Team Ella").first.id)
+      @lynn = Player.where(:team_id => Team.where(:name => "Team Lynn").first.id)
+
    	@comment = Comment.new
       @homedbr = Mission.where(:category_id => Category.where(:mission_type => "Bible reading").first.id)
       @homedwp = Mission.where(:category_id => Category.where(:mission_type => "Prayer").first.id)
