@@ -21,7 +21,7 @@ class Comment < ApplicationRecord
         provider: 'AWS',
         aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"],
         aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],
-        region: ENV["AWS_REGION"],
+        region: ENV["AWS_REGION"]
     },
     fog_directory: ENV["FOG_DIRECTORY"]
 
@@ -42,8 +42,13 @@ class Comment < ApplicationRecord
     :fog_credentials => {
         provider: 'AWS',
         aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"],
+<<<<<<< HEAD
         aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],
         region: ENV["AWS_REGION"],
+=======
+        aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"]
+        region: ENV["AWS_REGION"]
+>>>>>>> 022928f175e6babccb6b35cfb650be473e4f6676
     },
     fog_directory: ENV["FOG_DIRECTORY"]
 
