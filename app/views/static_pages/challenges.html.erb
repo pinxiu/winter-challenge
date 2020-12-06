@@ -10,9 +10,9 @@
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <h3>Service/Gratitude</h3>
+                <h3>Bible reading</h3>
                 <ul class = "list-group">
-                    <% @service.each do |mission| %>
+                    <% @challengedbr.each do |mission| %>
                         <li class = "list-group-item">
                             <%= mission.name %>
                             - 
@@ -23,9 +23,9 @@
                 </ul>
             </div>
             <div class="col-lg-6">
-                <h3>Evangelism</h3>
+                <h3>Prayer</h3>
                 <ul class = "list-group">
-                    <% @evangelism.each do |mission| %>
+                    <% @challengedwp.each do |mission| %>
                         <li class = "list-group-item">
                             <%= mission.name %>
                             -
@@ -43,9 +43,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <h3>Spiritual Growth</h3>
+                <h3>Reaching out</h3>
                 <ul class = "list-group">
-                    <% @sg.each do |mission| %>
+                    <% @challengepoc.each do |mission| %>
                         <li class = "list-group-item">
                             <%= mission.name %> 
                             - 
@@ -56,9 +56,9 @@
                 </ul>
             </div>
             <div class="col-lg-6">
-                <h3>Physical Equipping</h3>
+                <h3>Skills for serving</h3>
                 <ul class = "list-group">
-                    <% @equip.each do |mission| %>
+                    <% @challengelss.each do |mission| %>
                         <li class = "list-group-item">
                             <%= mission.name %>
                             - 
@@ -68,6 +68,62 @@
                     <% end %>
                 </ul>
             </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="content-section-a">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h3>“Fasting” / Focus</h3>
+                <ul class = "list-group">
+                    <% @challengefif.each do |mission| %>
+                        <li class = "list-group-item">
+                            <%= mission.name %> 
+                            - 
+                            <%= mission.points %>
+                            points
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h3>Exercise</h3>
+                <ul class = "list-group">
+                    <% @challengeexe.each do |mission| %>
+                        <li class = "list-group-item">
+                            <%= mission.name %>
+                            - 
+                            <%= mission.points %>
+                            points
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="content-section-a">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h3>Message / Talk</h3>
+                <ul class = "list-group">
+                    <% @challengepmt.each do |mission| %>
+                        <li class = "list-group-item">
+                            <%= mission.name %> 
+                            - 
+                            <%= mission.points %>
+                            points
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+            
         </div>
     </div>
 

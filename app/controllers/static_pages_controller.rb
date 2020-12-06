@@ -49,19 +49,23 @@ class StaticPagesController < ApplicationController
       @winner = @points.delete_at(0)
 
    	@comment = Comment.new
-      # TODO Edit these to the IGSM categories
-      @sg = Mission.where(:category_id => Category.where(:mission_type => "Spiritual Growth").first.id)
-      @evangelism = Mission.where(:category_id => Category.where(:mission_type => "Evangelism").first.id)
-      @ser = Mission.where(:category_id => Category.where(:mission_type => "Service/Gratitude").first.id)
-      @eq = Mission.where(:category_id => Category.where(:mission_type => "Equipping").first.id)
+      @homedbr = Mission.where(:category_id => Category.where(:mission_type => "Bible reading").first.id)
+      @homedwp = Mission.where(:category_id => Category.where(:mission_type => "Prayer").first.id)
+      @homepoc = Mission.where(:category_id => Category.where(:mission_type => "Reaching out").first.id)
+      @homelss = Mission.where(:category_id => Category.where(:mission_type => "Skills for serving").first.id)
+      @homefif = Mission.where(:category_id => Category.where(:mission_type => "“Fasting” / Focus").first.id)
+      @homeexe = Mission.where(:category_id => Category.where(:mission_type => "Exercise").first.id)
+      @homepmt = Mission.where(:category_id => Category.where(:mission_type => "Message / Talk").first.id)
    end
 
    def challenges
-    # TODO Edit these to the IGSM categories
-   	@sg = Mission.where(:category_id => Category.where(:mission_type => "Spiritual Growth").first.id)
-   	@evangelism = Mission.where(:category_id => Category.where(:mission_type => "Evangelism").first.id)
-   	@service = Mission.where(:category_id => Category.where(:mission_type => "Service/Gratitude").first.id)
-   	@equip = Mission.where(:category_id => Category.where(:mission_type => "Equipping").first.id)
+      @challengedbr = Mission.where(:category_id => Category.where(:mission_type => "Bible reading").first.id)
+      @challengedwp = Mission.where(:category_id => Category.where(:mission_type => "Prayer").first.id)
+      @challengepoc = Mission.where(:category_id => Category.where(:mission_type => "Reaching out").first.id)
+      @challengelss = Mission.where(:category_id => Category.where(:mission_type => "Skills for serving").first.id)
+      @challengefif = Mission.where(:category_id => Category.where(:mission_type => "“Fasting” / Focus").first.id)
+      @challengeexe = Mission.where(:category_id => Category.where(:mission_type => "Exercise").first.id)
+      @challengepmt = Mission.where(:category_id => Category.where(:mission_type => "Message / Talk").first.id)
    end
 
    def stats

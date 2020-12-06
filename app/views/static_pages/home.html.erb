@@ -93,23 +93,38 @@
 
                             <select class="form-control" name="comment[mission_id]" id="comment_mission_id">
                                 <option value>Select Challenge</option>
-                                <optgroup label="Spiritual Growth">Spiritual Growth
-                                    <% @sg.each do |mission| %>
+                                <optgroup label="Bible reading">Bible reading
+                                    <% @homedbr.each do |mission| %>
                                     <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
                                     <% end %>
                                 </optgroup>
-                                <optgroup label="Evangelism">Evangelism
-                                    <% @evangelism.each do |mission| %>
+                                <optgroup label="Prayer">Prayer
+                                    <% @homedwp.each do |mission| %>
                                     <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
                                     <% end %>
                                 </optgroup>
-                                <optgroup label="Service/Gratitude">Service/Gratitude
-                                    <% @ser.each do |mission| %>
+                                <optgroup label="Reaching out">Reaching out
+                                    <% @homepoc.each do |mission| %>
                                     <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
                                     <% end %>
                                 </optgroup>
-                                <optgroup label="Equipping">Equipping
-                                    <% @eq.each do |mission| %>
+                                <optgroup label="Skills for serving">Skills for serving
+                                    <% @homelss.each do |mission| %>
+                                    <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
+                                    <% end %>
+                                </optgroup>
+                                <optgroup label="“Fasting” / Focus">“Fasting” / Focus
+                                    <% @homefif.each do |mission| %>
+                                    <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
+                                    <% end %>
+                                </optgroup>
+                                <optgroup label="Exercise">Exercise
+                                    <% @homeexe.each do |mission| %>
+                                    <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
+                                    <% end %>
+                                </optgroup>
+                                <optgroup label="Message / Talk">Message / Talk
+                                    <% @homepmt.each do |mission| %>
                                     <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
                                     <% end %>
                                 </optgroup>
