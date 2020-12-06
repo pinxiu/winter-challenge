@@ -64,8 +64,8 @@ team_lynn = Team.create!(name: 'Team Lynn')
 
 jeff = Player.create!(name: 'Jeff Chiu', team: team_jeff)
 jerry = Player.create!(name: 'Jerry Tai', team: team_jeff)
-victor = Player.create!(name: 'Youchen (Victor) Zhang', team: team_jeff)
 yichuan = Player.create!(name: 'Yichuan Lu', team: team_jeff)
+alvin = Player.create!(name: 'Alvin Tan', team: team_jeff)
 
 jisup = Player.create!(name: 'Jisup Hong', team: team_jisup)
 mark = Player.create!(name: 'Mark Borja', team: team_jisup)
@@ -77,8 +77,8 @@ sean = Player.create!(name: 'Sean Zhang', team: team_gary)
 
 adam = Player.create!(name: 'Adam Kor', team: team_adam)
 alan = Player.create!(name: 'Alan Kwok', team: team_adam)
-alvin = Player.create!(name: 'Alvin Tan', team: team_adam)
 kevin = Player.create!(name: 'Kevin Lee', team: team_adam)
+victor = Player.create!(name: 'Youchen (Victor) Zhang', team: team_adam)
 
 sara = Player.create!(name: 'Sara Hong', team: team_sara)
 grace = Player.create!(name: 'Grace Borja', team: team_sara)
