@@ -95,12 +95,16 @@
                                 <option value>Select Challenge</option>
                                 <optgroup label="Bible reading">Bible reading
                                     <% @homedbr.each do |mission| %>
-                                    <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
+                                        <% if !mission.name.include? "Daily" %>
+                                        <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
+                                        <% end %>
                                     <% end %>
                                 </optgroup>
                                 <optgroup label="Prayer">Prayer
                                     <% @homedwp.each do |mission| %>
-                                    <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
+                                        <% if !mission.name.include? "Daily" %>
+                                        <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
+                                        <% end %>
                                     <% end %>
                                 </optgroup>
                                 <optgroup label="Reaching out">Reaching out
@@ -113,6 +117,9 @@
                                     <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
                                     <% end %>
                                 </optgroup>
+
+                                <%# Remove daily only categories %>
+                                <% if false %>
                                 <optgroup label="“Fasting” / Focus">“Fasting” / Focus
                                     <% @homefif.each do |mission| %>
                                     <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
@@ -123,6 +130,8 @@
                                     <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
                                     <% end %>
                                 </optgroup>
+                                <% end %>
+                                
                                 <optgroup label="Message / Talk">Message / Talk
                                     <% @homepmt.each do |mission| %>
                                     <option value=<%= mission.id %>><%= mission.name %> - <%= mission.points%> points</option>
