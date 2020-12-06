@@ -34,7 +34,10 @@
 									<%= comment.content %>
 								<% end %>
                                 <hr>
-                                Challenge: <%= comment.mission.name %> - <%= comment.mission.points %> points
+								Challenge: <%= comment.mission.name %> - <%= comment.mission.points %> points 
+								<% if comment.multiplier > 1 %>
+								completed <%= comment.multiplier %> times!
+								<% end %>
                             </div>
                             <div class="comment-media">
                                 <% if comment.video.file? %>
