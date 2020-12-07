@@ -1,10 +1,10 @@
 class StaticPagesController < ApplicationController
    def home
       @totalCount = Comment.count
-      one = Comment.where(:team => "Team Jeff").all
-      two = Comment.where(:team => "Team Jisup").all
-      three = Comment.where(:team => "Team Gary").all
-      four = Comment.where(:team => "Team Adam").all
+      one = Comment.where(:team => "Team Some Men").all
+      two = Comment.where(:team => "Ordinary Men").all
+      three = Comment.where(:team => "Team Zed").all
+      four = Comment.where(:team => "Team Young and Free").all
       five = Comment.where(:team => "Team Sara").all
       six = Comment.where(:team => "Team Ella").all
       seven = Comment.where(:team => "Team Lynn").all
@@ -137,16 +137,16 @@ class StaticPagesController < ApplicationController
         end
     end
 
-      @points = [['Team Jeff', @oneSum], ['Team Jisup', @twoSum], ['Team Gary', @threeSum], ['Team Adam', @fourSum], ['Team Sara', @fiveSum], ['Team Ella', @sixSum], ['Team Lynn', @sevenSum]].sort do |a, b|
+      @points = [['Team Some Men', @oneSum], ['Ordinary Men', @twoSum], ['Team Zed', @threeSum], ['Team Young and Free', @fourSum], ['Team Sara', @fiveSum], ['Team Ella', @sixSum], ['Team Lynn', @sevenSum]].sort do |a, b|
          b[1] <=> a[1]
       end
 
       @winner = @points.delete_at(0)
 
-      @jeff = Player.where(:team_id => Team.where(:name => "Team Jeff").first.id)
-      @jisup = Player.where(:team_id => Team.where(:name => "Team Jisup").first.id)
-      @gary = Player.where(:team_id => Team.where(:name => "Team Gary").first.id)
-      @adam = Player.where(:team_id => Team.where(:name => "Team Adam").first.id)
+      @jeff = Player.where(:team_id => Team.where(:name => "Team Some Men").first.id)
+      @jisup = Player.where(:team_id => Team.where(:name => "Ordinary Men").first.id)
+      @gary = Player.where(:team_id => Team.where(:name => "Team Zed").first.id)
+      @adam = Player.where(:team_id => Team.where(:name => "Team Young and Free").first.id)
       @sara = Player.where(:team_id => Team.where(:name => "Team Sara").first.id)
       @ella = Player.where(:team_id => Team.where(:name => "Team Ella").first.id)
       @lynn = Player.where(:team_id => Team.where(:name => "Team Lynn").first.id)
@@ -173,10 +173,10 @@ class StaticPagesController < ApplicationController
 
    def stats   
       @totalCount = Comment.count
-      one = Comment.where(:team => "Team Jeff").all
-      two = Comment.where(:team => "Team Jisup").all
-      three = Comment.where(:team => "Team Gary").all
-      four = Comment.where(:team => "Team Adam").all
+      one = Comment.where(:team => "Team Some Men").all
+      two = Comment.where(:team => "Ordinary Men").all
+      three = Comment.where(:team => "Team Zed").all
+      four = Comment.where(:team => "Team Young and Free").all
       five = Comment.where(:team => "Team Sara").all
       six = Comment.where(:team => "Team Ella").all
       seven = Comment.where(:team => "Team Lynn").all
@@ -308,7 +308,7 @@ class StaticPagesController < ApplicationController
     end
        
 
-      @points = [['Team Jeff', @oneSum], ['Team Jisup', @twoSum], ['Team Gary', @threeSum], ['Team Adam', @fourSum], ['Team Sara', @fiveSum], ['Team Ella', @sixSum], ['Team Lynn', @sevenSum]].sort do |a, b|
+      @points = [['Team Some Men', @oneSum], ['Ordinary Men', @twoSum], ['Team Zed', @threeSum], ['Team Young and Free', @fourSum], ['Team Sara', @fiveSum], ['Team Ella', @sixSum], ['Team Lynn', @sevenSum]].sort do |a, b|
          b[1] <=> a[1]
       end
 
