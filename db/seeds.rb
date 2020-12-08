@@ -56,9 +56,9 @@ team_jeff = Team.create!(name: 'Team Some Men')
 team_jisup = Team.create!(name: 'Ordinary Men')
 team_gary = Team.create!(name: 'Team Zed')
 team_adam = Team.create!(name: 'Team Young and Free')
-team_sara = Team.create!(name: 'Team Sara')
-team_ella = Team.create!(name: 'Team Ella')
-team_lynn = Team.create!(name: 'Team Lynn')
+team_sara = Team.create!(name: 'Full Measure')
+team_ella = Team.create!(name: 'Sent')
+team_lynn = Team.create!(name: 'Team Winner Challenge')
 
 # Create Team Member
 

@@ -5,9 +5,9 @@ class StaticPagesController < ApplicationController
       two = Comment.where(:team => "Ordinary Men").all
       three = Comment.where(:team => "Team Zed").all
       four = Comment.where(:team => "Team Young and Free").all
-      five = Comment.where(:team => "Team Sara").all
-      six = Comment.where(:team => "Team Ella").all
-      seven = Comment.where(:team => "Team Lynn").all
+      five = Comment.where(:team => "Full Measure").all
+      six = Comment.where(:team => "Sent").all
+      seven = Comment.where(:team => "Team Winner Challenge").all
    	@oneSum = 0;
    	@twoSum = 0;
     @threeSum = 0;
@@ -137,7 +137,7 @@ class StaticPagesController < ApplicationController
         end
     end
 
-      @points = [['Team Some Men', @oneSum], ['Ordinary Men', @twoSum], ['Team Zed', @threeSum], ['Team Young and Free', @fourSum], ['Team Sara', @fiveSum], ['Team Ella', @sixSum], ['Team Lynn', @sevenSum]].sort do |a, b|
+      @points = [['Team Some Men', @oneSum], ['Ordinary Men', @twoSum], ['Team Zed', @threeSum], ['Team Young and Free', @fourSum], ['Full Measure', @fiveSum], ['Sent', @sixSum], ['Team Winner Challenge', @sevenSum]].sort do |a, b|
          b[1] <=> a[1]
       end
 
@@ -147,9 +147,9 @@ class StaticPagesController < ApplicationController
       @jisup = Player.where(:team_id => Team.where(:name => "Ordinary Men").first.id)
       @gary = Player.where(:team_id => Team.where(:name => "Team Zed").first.id)
       @adam = Player.where(:team_id => Team.where(:name => "Team Young and Free").first.id)
-      @sara = Player.where(:team_id => Team.where(:name => "Team Sara").first.id)
-      @ella = Player.where(:team_id => Team.where(:name => "Team Ella").first.id)
-      @lynn = Player.where(:team_id => Team.where(:name => "Team Lynn").first.id)
+      @sara = Player.where(:team_id => Team.where(:name => "Full Measure").first.id)
+      @ella = Player.where(:team_id => Team.where(:name => "Sent").first.id)
+      @lynn = Player.where(:team_id => Team.where(:name => "Team Winner Challenge").first.id)
 
    	@comment = Comment.new
       @homedbr = Mission.where(:category_id => Category.where(:mission_type => "Bible reading").first.id)
@@ -177,9 +177,9 @@ class StaticPagesController < ApplicationController
       two = Comment.where(:team => "Ordinary Men").all
       three = Comment.where(:team => "Team Zed").all
       four = Comment.where(:team => "Team Young and Free").all
-      five = Comment.where(:team => "Team Sara").all
-      six = Comment.where(:team => "Team Ella").all
-      seven = Comment.where(:team => "Team Lynn").all
+      five = Comment.where(:team => "Full Measure").all
+      six = Comment.where(:team => "Sent").all
+      seven = Comment.where(:team => "Team Winner Challenge").all
       @oneSum = 0;
       @twoSum = 0;
       @threeSum = 0;
@@ -308,7 +308,7 @@ class StaticPagesController < ApplicationController
     end
        
 
-      @points = [['Team Some Men', @oneSum], ['Ordinary Men', @twoSum], ['Team Zed', @threeSum], ['Team Young and Free', @fourSum], ['Team Sara', @fiveSum], ['Team Ella', @sixSum], ['Team Lynn', @sevenSum]].sort do |a, b|
+      @points = [['Team Some Men', @oneSum], ['Ordinary Men', @twoSum], ['Team Zed', @threeSum], ['Team Young and Free', @fourSum], ['Full Measure', @fiveSum], ['Sent', @sixSum], ['Team Winner Challenge', @sevenSum]].sort do |a, b|
          b[1] <=> a[1]
       end
 
