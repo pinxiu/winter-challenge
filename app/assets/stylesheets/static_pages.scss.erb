@@ -48,7 +48,7 @@ h6 {
 }
 
 .topnav {
-    font-size: 14px; 
+    font-size: 14px;
 }
 
 .lead {
@@ -61,8 +61,12 @@ h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url('<%= asset_path("2020 IGSM Winter Challenge.jpg") %> ') no-repeat center center;
+    background: url('<%= asset_path("2020-igsm.jpg") %> ') no-repeat center center;
     background-size: cover;
+    height: 275px;
+    @media (min-width:769px) {
+      height: 400px;
+    }
 }
 
 .completed-background {
@@ -90,7 +94,7 @@ h6 {
 .intro-message > h1 {
     margin: 0;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.64);
-    font-size: 5em;  
+    font-size: 5em;
 }
 
 .intro-divider {
@@ -101,12 +105,12 @@ h6 {
 
 .intro-message > h3, .intro-count, .intro-message > h2 {
     text-shadow: 2px 2px 6px rgba(0,0,0,0.64);
-    font-size: 3em;  
+    font-size: 3em;
 }
 
 .winner {
     text-shadow: 2px 2px 6px rgba(0,0,0,0.64);
-    font-size: 6em;  
+    font-size: 6em;
 }
 
 @media(max-width:767px) {
@@ -141,8 +145,17 @@ h6 {
 }
 
 .content-section-a {
-    padding: 50px 0;
-    background-color: #f8f8f8;
+  padding: 0 0 50px;
+  background-color: #f8f8f8;
+
+  @media (min-width:769px) {
+      padding: 50px 0;
+    }
+
+    & h1 {
+      text-align: center;
+      font-size: 30px;
+    }
 }
 
 .content-section-b {
@@ -270,7 +283,7 @@ p.copyright {
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: bold;
     font-size: 18px;
-    
+
 }
 
 .comment-media img{
@@ -278,7 +291,7 @@ p.copyright {
     text-align: center;
     max-width: 100%;
     max-height: 100%;
-    
+
 }
 
 .comment-content {
