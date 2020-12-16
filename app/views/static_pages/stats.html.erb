@@ -9,35 +9,49 @@
 <svg class="chart" width="1200" height="800" aria-labelledby="title desc" role="img">
   <title id="title">Winning Team</title>
   <desc id="desc">Team Some Men, Ordinary Men, Team Zed, Team Young and Free, Full Measure, Sent, Team Winner Challenge</desc>
-  <g class="bar">
-    <rect width="<%= @oneStat %>" height="99"></rect>
-    <text x="<%= @barOne %>" y="49.5" dy=".35em">Team Some Men - Acts 11:20 - <%= @oneSum %></text>
-  </g>
+  <a xlink:href="/completed/<%= @teamIdOne %>">
+    <!-- winner class is bar-winner -->
+    <g class="bar">
+      <rect width="<%= @oneStat %>" height="99"></rect>
+      <text x="<%= @barOne %>" y="49.5" dy=".35em">Team Some Men - Acts 11:20 - <%= @oneSum %></text>
+    </g>
+  </a>
+  <a xlink:href="/completed/<%= @teamIdTwo %>">
   <g class="bar">
     <rect width="<%= @twoStat %>" height="99" y="100"></rect>
     <text x="<%= @barTwo %>" y="149" dy=".35em">Ordinary Men - 2 Timothy 4:5 - <%= @twoSum %></text>
   </g>
+  </a>
+  <a xlink:href="/completed/<%= @teamIdThree %>">
   <g class="bar">
     <rect width="<%= @threeStat %>" height="99" y="200"></rect>
     <text x="<%= @barThree %>" y="249" dy=".35em">Team Zed - 1 Corinthians 9:24-25 - <%= @threeSum %></text>
   </g>
+  </a>
+  <a xlink:href="/completed/<%= @teamIdFour %>">
   <g class="bar">
     <rect width="<%= @fourStat %>" height="99" y="300"></rect>
     <text x="<%= @barFour %>" y="349" dy=".35em">Team Young and Free - 1 Timothy 4:12 - <%= @fourSum %></text>
   </g>
+  </a>
+  <a xlink:href="/completed/<%= @teamIdFive %>">
   <g class="bar">
     <rect width="<%= @fiveStat %>" height="99" y="400"></rect>
     <text x="<%= @barFive %>" y="449" dy=".35em">Full Measure - Mark 5:24-25 - <%= @fiveSum %></text>
   </g>
+  </a>
+  <a xlink:href="/completed/<%= @teamIdSix %>">
   <g class="bar">
     <rect width="<%= @sixStat %>" height="99" y="500"></rect>
     <text x="<%= @barSix %>" y="549" dy=".35em">Sent - Romans 10:14-15 - <%= @sixSum %></text>
   </g>
-  <!-- winner class is bar-winner -->
+  </a>
+  <a xlink:href="/completed/<%= @teamIdSeven %>">
   <g class="bar">
     <rect width="<%= @sevenStat %>" height="99" y="600"></rect>
     <text x="<%= @barSeven %>" y="649" dy=".35em">Team Winner Challenge - Philippians 3:14 - <%= @sevenSum %></text>
   </g>
+  </a>
 </svg>
             </div>
         </div>
