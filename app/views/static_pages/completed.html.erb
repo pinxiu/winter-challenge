@@ -33,7 +33,11 @@
                         <div class="all-comments">
                             <div class="comment-name"> <a href="/completed/<%= team_id %>/<%= player_id %>"><%= comment.name %></a> - <a href="/completed/<%= team_id %>"><%= comment.team %></a> </div>
                             <div class="comment-timestamp"> <%= comment.created_at.in_time_zone.to_time.strftime('%B %e at %l:%M %p') %>
-                            	<span>&nbsp;&nbsp;&nbsp;</span><a href="/delete/<%= comment.id %>">Delete</a>
+                            	<span>&nbsp;</span>
+                            	<%= link_to 'Delete',
+					                delete_path(comment.id), 
+					                class: 'btn',
+					                data: { confirm: "Are you sure you want to delete this submission by #{comment.name}?\n#{comment.mission.name}" } %>
                             </div>
                             <div class="comment-content">
    								<% if comment.content != nil %>
