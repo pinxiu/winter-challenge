@@ -26,8 +26,10 @@
                     
                     <div> 
                     <% @comments.each do |comment| %>
+                    <div style="display:none;">
                     	<%= team_id = Team.where(:name => comment.team).first.id %>
                     	<%= player_id = Player.where(:name => comment.name).first.id %>
+                    </div>
                         <div class="all-comments">
                             <div class="comment-name"> <a href="/completed/<%= team_id %>/<%= player_id %>"><%= comment.name %></a> - <a href="/completed/<%= team_id %>"><%= comment.team %></a> </div>
                             <div class="comment-timestamp"> <%= comment.created_at.in_time_zone.to_time.strftime('%B %e at %l:%M %p') %></div>
