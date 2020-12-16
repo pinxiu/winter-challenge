@@ -331,11 +331,32 @@ class StaticPagesController < ApplicationController
        @barFive = @fiveStat + 5
        @barSix = @sixStat + 5
        @barSeven = @sevenStat + 5
+
+       @teamIdOne = Team.where(:name => "Team Some Men").first.id
+       @teamIdTwo = Team.where(:name => "Ordinary Men").first.id
+       @teamIdThree = Team.where(:name => "Team Zed").first.id
+       @teamIdFour = Team.where(:name => "Team Young and Free").first.id
+       @teamIdFive = Team.where(:name => "Full Measure").first.id
+       @teamIdSix = Team.where(:name => "Sent").first.id
+       @teamIdSeven = Team.where(:name => "Team Winner Challenge").first.id
        
    end
 
    def completed
-      @comments = Comment.page(params[:page]).order('created_at DESC')
+      team_id = params[:team_id]
+      player_id = params[:player_id]
+      if team_id.nil?
+          @comments = Comment.page(params[:page]).order('created_at DESC')
+      else
+          if player_id.nil?
+              team_name = Team.where(:id => team_id).first.name
+              @comments = Comment.where(:team => team_name).page(params[:page]).order('created_at DESC')
+          else
+              # assume that queried player always belongs to the queried team
+              player_name = Player.where(:id => player_id).first.name
+              @comments = Comment.where(:name => player_name).page(params[:page]).order('created_at DESC')
+          end
+      end
    end 
 
    def powerranking
