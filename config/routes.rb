@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'stats', to: 'static_pages#stats'
   get 'completed/:team_id', to: 'static_pages#completed'
   get 'completed/:team_id/:player_id', to: 'static_pages#completed'
+  get 'delete/:comment_id', to: 'static_pages#delete'
   # resources :missions
   resources :comments, only: [:create]
   resources :comment

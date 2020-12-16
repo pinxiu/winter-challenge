@@ -359,6 +359,12 @@ class StaticPagesController < ApplicationController
       end
    end 
 
+   def delete
+      comment_id = params[:comment_id]
+      Comment.where(:id => comment_id).delete_all
+      redirect_to completed_path
+   end
+
    def powerranking
       names = Comment.uniq.pluck(:name)
    end
