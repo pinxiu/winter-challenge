@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201206064701) do
+ActiveRecord::Schema.define(version: 20201228074324) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20201206064701) do
     t.integer  "video_file_size"
     t.datetime "video_updated_at"
     t.string   "multiplier",          default: "1"
+    t.integer  "student_multiplier",  default: 1
     t.index ["mission_id"], name: "index_comments_on_mission_id", using: :btree
   end
 
