@@ -20,7 +20,7 @@ class StaticPagesController < ApplicationController
            
    	one.each do |post|
         @multiply = begin
-            Integer(post.multiplier)
+            Integer(post.multiplier) * Integer(post.student_multiplier)
         rescue
             1
         end
