@@ -37,7 +37,7 @@ class StaticPagesController < ApplicationController
 
     two.each do |post|
         @multiply = begin
-            Integer(post.multiplier)
+            Integer(post.multiplier) * Integer(post.student_multiplier)
         rescue
             1
         end
@@ -54,7 +54,7 @@ class StaticPagesController < ApplicationController
 
     three.each do |post|
         @multiply = begin
-            Integer(post.multiplier)
+            Integer(post.multiplier) * Integer(post.student_multiplier)
         rescue
             1
         end
@@ -71,7 +71,7 @@ class StaticPagesController < ApplicationController
 
     four.each do |post|
         @multiply = begin
-            Integer(post.multiplier)
+            Integer(post.multiplier) * Integer(post.student_multiplier)
         rescue
             1
         end
@@ -88,7 +88,7 @@ class StaticPagesController < ApplicationController
 
     five.each do |post|
         @multiply = begin
-            Integer(post.multiplier)
+            Integer(post.multiplier) * Integer(post.student_multiplier)
         rescue
             1
         end
@@ -105,7 +105,7 @@ class StaticPagesController < ApplicationController
 
     six.each do |post|
         @multiply = begin
-            Integer(post.multiplier)
+            Integer(post.multiplier) * Integer(post.student_multiplier)
         rescue
             1
         end
@@ -122,7 +122,7 @@ class StaticPagesController < ApplicationController
 
     seven.each do |post|
         @multiply = begin
-            Integer(post.multiplier)
+            Integer(post.multiplier) * Integer(post.student_multiplier)
         rescue
             1
         end
@@ -190,7 +190,7 @@ class StaticPagesController < ApplicationController
 
    	one.each do |post|
         @multiply = begin
-            Integer(post.multiplier)
+            Integer(post.multiplier) * Integer(post.student_multiplier)
         rescue
             1
         end
@@ -207,7 +207,7 @@ class StaticPagesController < ApplicationController
 
     two.each do |post|
         @multiply = begin
-            Integer(post.multiplier)
+            Integer(post.multiplier) * Integer(post.student_multiplier)
         rescue
             1
         end
@@ -224,7 +224,7 @@ class StaticPagesController < ApplicationController
 
     three.each do |post|
         @multiply = begin
-            Integer(post.multiplier)
+            Integer(post.multiplier) * Integer(post.student_multiplier)
         rescue
             1
         end
@@ -241,7 +241,7 @@ class StaticPagesController < ApplicationController
 
     four.each do |post|
         @multiply = begin
-            Integer(post.multiplier)
+            Integer(post.multiplier) * Integer(post.student_multiplier)
         rescue
             1
         end
@@ -258,7 +258,7 @@ class StaticPagesController < ApplicationController
 
     five.each do |post|
         @multiply = begin
-            Integer(post.multiplier)
+            Integer(post.multiplier) * Integer(post.student_multiplier)
         rescue
             1
         end
@@ -275,7 +275,7 @@ class StaticPagesController < ApplicationController
 
     six.each do |post|
         @multiply = begin
-            Integer(post.multiplier)
+            Integer(post.multiplier) * Integer(post.student_multiplier)
         rescue
             1
         end
@@ -292,7 +292,7 @@ class StaticPagesController < ApplicationController
 
     seven.each do |post|
         @multiply = begin
-            Integer(post.multiplier)
+            Integer(post.multiplier) * Integer(post.student_multiplier)
         rescue
             1
         end
