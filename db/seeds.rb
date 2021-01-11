@@ -64,7 +64,6 @@ team_lynn = Team.create!(name: 'Team Winner Challenge')
 
 jeff = Player.create!(name: 'Jeff Chiu', team: team_jeff)
 jerry = Player.create!(name: 'Jerry Tai', team: team_jeff)
-yichuan = Player.create!(name: 'Yichuan Lu', team: team_jeff)
 alvin = Player.create!(name: 'Alvin Tan', team: team_jeff)
 
 jisup = Player.create!(name: 'Jisup Hong', team: team_jisup)
@@ -86,7 +85,6 @@ jilan = Player.create!(name: 'Jilan Zheng', team: team_sara)
 summer = Player.create!(name: 'Summer Zhao', team: team_sara)
 
 ella = Player.create!(name: 'Ella Wang', team: team_ella)
-jenny = Player.create!(name: 'Jenny Huang', team: team_ella)
 phoebe = Player.create!(name: 'Phoebe Gong', team: team_ella)
 wenxia = Player.create!(name: 'Wenxia Lin', team: team_ella)
 
