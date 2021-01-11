@@ -498,7 +498,7 @@ class StaticPagesController < ApplicationController
     end
        
     @oneSum += [@jeffsum, @jerrysum, @alvinsum].min
-    @twoSum += [@jisupsum, @marksum].min
+    @twoSum += 2 * ([@jisupsum, @marksum].min)
     @sixSum += [@ellasum, @phoebesum, @wenxiasum].min
 
       @points = [['Team Some Men', @oneSum], ['Ordinary Men', @twoSum], ['Team Zed', @threeSum], ['Team Young and Free', @fourSum], ['Full Measure', @fiveSum], ['Sent', @sixSum], ['Team Winner Challenge', @sevenSum]].sort do |a, b|
