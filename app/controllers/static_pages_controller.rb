@@ -15,6 +15,18 @@ class StaticPagesController < ApplicationController
     @fiveSum = 0;
     @sixSum = 0;
     @sevenSum = 0;
+
+    @jeffsum = 0;
+    @jerrysum = 0;
+    @alvinsum = 0;
+
+    @jisupsum = 0;
+    @marksum = 0;
+
+
+    @ellasum = 0;
+    @phoebesum = 0;
+    @wenxiasum = 0;
     
     @multiply = 0;
            
@@ -23,6 +35,37 @@ class StaticPagesController < ApplicationController
             Integer(post.multiplier) * Integer(post.student_multiplier)
         rescue
             1
+        end
+
+        if post.name == "Jeff Chiu"
+            @jeffsum += post.mission.points * @multiply
+            if post.is_type_of_video? 
+                @jeffsum += 3 * @multiply
+            elsif post.is_type_of_image?
+                @jeffsum += 2 * @multiply
+            else 
+                @jeffsum += 0 * @multiply
+            end
+        end
+        if post.name == "Jerry Tai"
+            @jerrysum += post.mission.points * @multiply
+            if post.is_type_of_video? 
+                @jerrysum += 3 * @multiply
+            elsif post.is_type_of_image?
+                @jerrysum += 2 * @multiply
+            else 
+                @jerrysum += 0 * @multiply
+            end
+        end
+        if post.name == "Alvin Tan"
+            @alvinsum += post.mission.points * @multiply
+            if post.is_type_of_video? 
+                @alvinsum += 3 * @multiply
+            elsif post.is_type_of_image?
+                @alvinsum += 2 * @multiply
+            else 
+                @alvinsum += 0 * @multiply
+            end
         end
         
    		@oneSum += post.mission.points * @multiply
@@ -40,6 +83,27 @@ class StaticPagesController < ApplicationController
             Integer(post.multiplier) * Integer(post.student_multiplier)
         rescue
             1
+        end
+
+        if post.name == "Jisup Hong"
+            @jisupsum += post.mission.points * @multiply
+            if post.is_type_of_video? 
+                @jisupsum += 3 * @multiply
+            elsif post.is_type_of_image?
+                @jisupsum += 2 * @multiply
+            else 
+                @jisupsum += 0 * @multiply
+            end
+        end
+        if post.name == "Mark Borja"
+            @marksum += post.mission.points * @multiply
+            if post.is_type_of_video? 
+                @marksum += 3 * @multiply
+            elsif post.is_type_of_image?
+                @marksum += 2 * @multiply
+            else 
+                @marksum += 0 * @multiply
+            end
         end
         
         @twoSum += post.mission.points * @multiply
@@ -108,6 +172,37 @@ class StaticPagesController < ApplicationController
             Integer(post.multiplier) * Integer(post.student_multiplier)
         rescue
             1
+        end
+
+        if post.name == "Ella Wang"
+            @ellasum += post.mission.points * @multiply
+            if post.is_type_of_video? 
+                @ellasum += 3 * @multiply
+            elsif post.is_type_of_image?
+                @ellasum += 2 * @multiply
+            else 
+                @ellasum += 0 * @multiply
+            end
+        end
+        if post.name == "Phoebe Gong"
+            @phoebesum += post.mission.points * @multiply
+            if post.is_type_of_video? 
+                @phoebesum += 3 * @multiply
+            elsif post.is_type_of_image?
+                @phoebesum += 2 * @multiply
+            else 
+                @phoebesum += 0 * @multiply
+            end
+        end
+        if post.name == "Wenxia Lin"
+            @wenxiasum += post.mission.points * @multiply
+            if post.is_type_of_video? 
+                @wenxiasum += 3 * @multiply
+            elsif post.is_type_of_image?
+                @wenxiasum += 2 * @multiply
+            else 
+                @wenxiasum += 0 * @multiply
+            end
         end
         
         @sixSum += post.mission.points * @multiply
@@ -188,11 +283,54 @@ class StaticPagesController < ApplicationController
       @sixSum = 0;
       @sevenSum = 0;
 
+    @jeffsum = 0;
+    @jerrysum = 0;
+    @alvinsum = 0;
+
+    @jisupsum = 0;
+    @marksum = 0;
+
+
+    @ellasum = 0;
+    @phoebesum = 0;
+    @wenxiasum = 0;
+
    	one.each do |post|
         @multiply = begin
             Integer(post.multiplier) * Integer(post.student_multiplier)
         rescue
             1
+        end
+
+        if post.name == "Jeff Chiu"
+            @jeffsum += post.mission.points * @multiply
+            if post.is_type_of_video? 
+                @jeffsum += 3 * @multiply
+            elsif post.is_type_of_image?
+                @jeffsum += 2 * @multiply
+            else 
+                @jeffsum += 0 * @multiply
+            end
+        end
+        if post.name == "Jerry Tai"
+            @jerrysum += post.mission.points * @multiply
+            if post.is_type_of_video? 
+                @jerrysum += 3 * @multiply
+            elsif post.is_type_of_image?
+                @jerrysum += 2 * @multiply
+            else 
+                @jerrysum += 0 * @multiply
+            end
+        end
+        if post.name == "Alvin Tan"
+            @alvinsum += post.mission.points * @multiply
+            if post.is_type_of_video? 
+                @alvinsum += 3 * @multiply
+            elsif post.is_type_of_image?
+                @alvinsum += 2 * @multiply
+            else 
+                @alvinsum += 0 * @multiply
+            end
         end
         
    		@oneSum += post.mission.points  * @multiply
@@ -210,6 +348,27 @@ class StaticPagesController < ApplicationController
             Integer(post.multiplier) * Integer(post.student_multiplier)
         rescue
             1
+        end
+
+        if post.name == "Jisup Hong"
+            @jisupsum += post.mission.points * @multiply
+            if post.is_type_of_video? 
+                @jisupsum += 3 * @multiply
+            elsif post.is_type_of_image?
+                @jisupsum += 2 * @multiply
+            else 
+                @jisupsum += 0 * @multiply
+            end
+        end
+        if post.name == "Mark Borja"
+            @marksum += post.mission.points * @multiply
+            if post.is_type_of_video? 
+                @marksum += 3 * @multiply
+            elsif post.is_type_of_image?
+                @marksum += 2 * @multiply
+            else 
+                @marksum += 0 * @multiply
+            end
         end
         
         @twoSum += post.mission.points  * @multiply
@@ -279,6 +438,37 @@ class StaticPagesController < ApplicationController
         rescue
             1
         end
+
+        if post.name == "Ella Wang"
+            @ellasum += post.mission.points * @multiply
+            if post.is_type_of_video? 
+                @ellasum += 3 * @multiply
+            elsif post.is_type_of_image?
+                @ellasum += 2 * @multiply
+            else 
+                @ellasum += 0 * @multiply
+            end
+        end
+        if post.name == "Phoebe Gong"
+            @phoebesum += post.mission.points * @multiply
+            if post.is_type_of_video? 
+                @phoebesum += 3 * @multiply
+            elsif post.is_type_of_image?
+                @phoebesum += 2 * @multiply
+            else 
+                @phoebesum += 0 * @multiply
+            end
+        end
+        if post.name == "Wenxia Lin"
+            @wenxiasum += post.mission.points * @multiply
+            if post.is_type_of_video? 
+                @wenxiasum += 3 * @multiply
+            elsif post.is_type_of_image?
+                @wenxiasum += 2 * @multiply
+            else 
+                @wenxiasum += 0 * @multiply
+            end
+        end
         
         @sixSum += post.mission.points  * @multiply
         if post.is_type_of_video? 
@@ -307,6 +497,9 @@ class StaticPagesController < ApplicationController
         end
     end
        
+    @oneSum += [@jeffsum, @jerrysum, @alvinsum].min
+    @twoSum += [@jisupsum, @marksum].min
+    @sixSum += [@ellasum, @phoebesum, @wenxiasum].min
 
       @points = [['Team Some Men', @oneSum], ['Ordinary Men', @twoSum], ['Team Zed', @threeSum], ['Team Young and Free', @fourSum], ['Full Measure', @fiveSum], ['Sent', @sixSum], ['Team Winner Challenge', @sevenSum]].sort do |a, b|
          b[1] <=> a[1]
@@ -316,21 +509,21 @@ class StaticPagesController < ApplicationController
 
       @winner = @points.delete_at(0)
        
-       @oneStat = @oneSum / 5
-       @twoStat = @twoSum / 5
-       @threeStat = @threeSum / 5
-       @fourStat = @fourSum / 5
-       @fiveStat = @fiveSum / 5
-       @sixStat = @sixSum / 5
-       @sevenStat = @sevenSum / 5
+       @oneStat = @oneSum / 10
+       @twoStat = @twoSum / 10
+       @threeStat = @threeSum / 10
+       @fourStat = @fourSum / 10
+       @fiveStat = @fiveSum / 10
+       @sixStat = @sixSum / 10
+       @sevenStat = @sevenSum / 10
        
-       @barOne = @oneStat + 5
-       @barTwo = @twoStat + 5
-       @barThree = @threeStat + 5
-       @barFour = @fourStat + 5
-       @barFive = @fiveStat + 5
-       @barSix = @sixStat + 5
-       @barSeven = @sevenStat + 5
+       @barOne = @oneStat
+       @barTwo = @twoStat
+       @barThree = @threeStat
+       @barFour = @fourStat
+       @barFive = @fiveStat
+       @barSix = @sixStat
+       @barSeven = @sevenStat
 
        @teamIdOne = Team.where(:name => "Team Some Men").first.id
        @teamIdTwo = Team.where(:name => "Ordinary Men").first.id
