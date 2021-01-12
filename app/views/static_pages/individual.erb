@@ -14,8 +14,8 @@
   <a xlink:href="/completed/team/<%= player.id %>">
     <!-- winner class is bar-winner -->
     <g class="bar">
-      <rect width="<%= player.score / 10 %>" height="99"  y="<%= idx * 100 %>"></rect>
-      <text x="<%= player.score / 10 + 5 %>" y="<%= idx * 100 + 49.5 %>" dy=".35em"><%= player.name %> - <%= player.score %></text>
+      <rect width="<%= player.score / 10 %>" height="19"  y="<%= idx * 20 %>"></rect>
+      <text x="<%= player.score / 10 + 5 %>" y="<%= idx * 20 + 9 %>" dy=".35em"><%= player.name %> - <%= player.score %></text>
     </g>
   </a>
   <%= idx = idx + 1 %>
