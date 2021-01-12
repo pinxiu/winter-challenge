@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'stats_individual', to: 'static_pages#stats_individual'
   get 'completed/:team_id', to: 'static_pages#completed'
   get 'completed/:team_id/:player_id', to: 'static_pages#completed'
+  get 'individual_stats', to: 'static_pages#individual'
   get 'delete/:comment_id', to: 'static_pages#delete', as: 'delete'
   # resources :missions
   resources :comments, only: [:create]
