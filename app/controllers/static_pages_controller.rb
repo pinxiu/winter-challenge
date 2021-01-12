@@ -1005,7 +1005,7 @@ class StaticPagesController < ApplicationController
    end 
 
    def individual
-      @players = Player.all
+      @players = Player.all.order('team_id ASC, id ASC')
       @players.each do |player|
           player.score = 0
           individual_comments = Comment.where(:name => player.name)
