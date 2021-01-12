@@ -1,0 +1,28 @@
+<div class="content-section-b">
+    <div class="container">
+        <div class="row">
+            <div class ="col-lg-4" style="padding-top:20px;">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Individual Stats</h2>
+                
+<svg class="chart" width="1200" height="3500" aria-labelledby="title desc" role="img">
+  <!-- <title id="title">Winning Team</title>
+  <desc id="desc">Team Some Men, Ordinary Men, Team Zed, Team Young and Free, Full Measure, Sent, Team Winner Challenge</desc> -->
+  <%= idx = 0 %>
+  <% @players.each do |player| %>
+  <a xlink:href="/completed/team/<%= player.id %>">
+    <!-- winner class is bar-winner -->
+    <g class="bar">
+      <rect width="<%= player.score / 10 %>" height="99"  y="<%= idx * 100 %>"></rect>
+      <text x="<%= player.score / 10 + 5 %>" y="<%= idx * 100 + 49.5 %>" dy=".35em"><%= player.name %> - <%= player.score %></text>
+    </g>
+  </a>
+  <%= idx = idx + 1 %>
+  <% end %>
+</svg>
+            </div>
+        </div>
+    </div>
+</div>
+
