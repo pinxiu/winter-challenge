@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'challenges', to: 'static_pages#challenges'
   get 'completed', to: 'static_pages#completed'
   get 'stats', to: 'static_pages#stats'
+  get 'stats_individual', to: 'static_pages#stats_individual'
   get 'completed/:team_id', to: 'static_pages#completed'
   get 'completed/:team_id/:player_id', to: 'static_pages#completed'
   get 'delete/:comment_id', to: 'static_pages#delete', as: 'delete'
