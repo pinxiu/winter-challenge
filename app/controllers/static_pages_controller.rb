@@ -552,6 +552,30 @@ class StaticPagesController < ApplicationController
       end
    end 
 
+   def individual
+      @players = Player.all
+      @players.each do |player|
+          player.score = 0
+          individual_comments = Comment.where(:name => player.name)
+          individual_comments.each do |post|
+            @multiply = begin
+                Integer(post.multiplier) * Integer(post.student_multiplier)
+            rescue
+                1
+            end
+            
+            player.score += post.mission.points  * @multiply
+            if post.is_type_of_video? 
+                player.score += 3 * @multiply
+            elsif post.is_type_of_image?
+                player.score += 2 * @multiply
+            else 
+                player.score += 0 * @multiply
+            end
+        end
+      end
+   end
+
    def delete
       comment_id = params[:comment_id]
       Comment.where(:id => comment_id).delete_all
