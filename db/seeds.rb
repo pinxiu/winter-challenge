@@ -52,7 +52,7 @@ Mission.create!(name: 'One time points: Prepare and give a presentation - Dry ru
 Mission.create!(name: 'One time points: Prepare and give a presentation - Video recording of presentation', points: 100, category: pmt)
 
 # Create Teams
-team_jeff = Team.create!(name: 'Team Some Men and Women')
+team_jeff = Team.create!(name: 'Team Some Men')
 team_jisup = Team.create!(name: 'Ordinary Men')
 team_gary = Team.create!(name: 'Team Zed')
 team_adam = Team.create!(name: 'Team Young and Free')
