@@ -21,7 +21,7 @@ exe = Category.create!(mission_type: 'Exercise')
 pmt = Category.create!(mission_type: 'Message / Talk')
 
 # Daily Bible reading
-Mission.create!(name: 'Daily Points: Read the day’s passage from igsm.link/bible-reading-plan (usually 3-5 chapters) and remember a key verse', points: 10, category: dbr)
+Mission.create!(name: 'Daily Points: Read the day’s passage from igsm.link/bible-reading-plan (usually 3-5 chapters) and remember a key verse', points: 15, category: dbr)
 Mission.create!(name: 'One time points: If you complete all the reading for the 40 days', points: 40, category: dbr)
 
 
@@ -52,7 +52,7 @@ Mission.create!(name: 'One time points: Prepare and give a presentation - Dry ru
 Mission.create!(name: 'One time points: Prepare and give a presentation - Video recording of presentation', points: 100, category: pmt)
 
 # Create Teams
-team_jeff = Team.create!(name: 'Team Some Men')
+team_jeff = Team.create!(name: 'Team Some Men and Women')
 team_jisup = Team.create!(name: 'Ordinary Men')
 team_gary = Team.create!(name: 'Team Zed')
 team_adam = Team.create!(name: 'Team Young and Free')
@@ -62,7 +62,7 @@ team_lynn = Team.create!(name: 'Team Winner Challenge')
 
 # Create Team Member
 
-jeff = Player.create!(name: 'Jeff Chiu', team: team_jeff)
+jeff = Player.create!(name: 'Kimi', team: team_jeff)
 jerry = Player.create!(name: 'Jerry Tai', team: team_jeff)
 alvin = Player.create!(name: 'Alvin Tan', team: team_jeff)
 
