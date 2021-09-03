@@ -37,7 +37,7 @@ class StaticPagesController < ApplicationController
             1
         end
 
-        if post.name == "Jeff Chiu"
+        if post.name == "Kimi"
             @jeffsum += post.mission.points * @multiply
             if post.is_type_of_video? 
                 @jeffsum += 3 * @multiply
@@ -302,7 +302,7 @@ class StaticPagesController < ApplicationController
             1
         end
 
-        if post.name == "Jeff Chiu"
+        if post.name == "Kimi"
             @jeffsum += post.mission.points * @multiply
             if post.is_type_of_video? 
                 @jeffsum += 3 * @multiply
@@ -590,7 +590,7 @@ class StaticPagesController < ApplicationController
           1
       end
 
-      if post.name == "Jeff Chiu"
+      if post.name == "Kimi"
           @jeffsum += post.mission.points * @multiply
           if post.is_type_of_video? 
               @jeffsum += 3 * @multiply
